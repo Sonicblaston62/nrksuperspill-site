@@ -1,5 +1,5 @@
 # NRK Super Spill (fan archive) - server settings
-ErrorDocument 404 /nrksuperspill/404.html
+ErrorDocument 404 /nrksuperspill-site/404.html
 AddType application/wasm .wasm
 AddType application/x-shockwave-flash .swf
 AddType application/x-director .dcr .dir .dxr .cct .cst .cxt

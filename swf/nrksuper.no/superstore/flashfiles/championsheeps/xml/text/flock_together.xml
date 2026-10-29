@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<flock_together>
+	<intro_screen>
+		
+		<intro>
+			<title>Look at me, im intro text!!!!</title>
+			<body>hey look, got me some body</body>
+		</intro>
+		
+		<intructions>
+			<title>How to play</title>
+			<body_1>Herd your sheep to safety by matching their leotards</body_1>
+			<body_2>Use your arrow keys to guide the falling flock</body_2>
+			<body_3>Don't stack sheep higher than the bunting!</body_3>
+			<body_4>Complete each level by herding as many sheep away as you can</body_4>
+		</intructions>
+		
+		<play_game_button>Play Game!</play_game_button>		
+		
+		<side_bar>
+			<personal_best>Your previous best:</personal_best>			
+			<rank>Your current ranking:</rank>			
+			<todays_high_score>Todays highest score:</todays_high_score>			
+			<overall_high_score>All time highest score</overall_high_score>
+			<your_achievements>Your achievements:</your_achievements>
+			<view_leader_board_button>View Leaderboard</view_leader_board_button>
+		</side_bar>
+	</intro_screen>
+	
+
+		<hud>
+		<level>LEVEL</level>
+		<score>SCORE</score>
+		<sheep_left>SHEEP LEFT</sheep_left>
+		<select_level_button>Select Level</select_level_button>
+	</hud>
+	
+	<level_select>
+		<title>select a level</title>
+		<go_back_button>GO BACK</go_back_button>
+	</level_select>
+	
+	<level_start_screen>
+		<title>Get ready to play</title>
+		<body>Get ready to play</body>
+		<start_game_button>START GAME</start_game_button>
+	</level_start_screen>
+	
+	<level_complete_screen>
+		<title>LEVEL COMPLETE!</title>
+		<body1>This round you scored</body1>
+		<body2>and got these achievements</body2>
+		<try_again_button>TRY AGAIN</try_again_button>
+		<next_level_button>NEXT LEVEL</next_level_button>
+		<not_signed_in>to save your scores and win achievements!</not_signed_in>
+	</level_complete_screen>
+	
+	<level_fail_screen>
+		<title>SHEEP OVERLOAD!</title>
+		<body1>The sheep piled up too high! Try to keep them below the bunting. </body1>
+		<try_again_button>TRY AGAIN</try_again_button>
+	</level_fail_screen>
+	
+	<hints>
+		<hint0>
+			<title>TOP TIP</title>
+			<body>Drop all 6 of your sheep safely to the ground to complete the level</body>
+		</hint0>
+		<hint1>
+			<title>TOP TIP</title>
+			<body>Steer the sheep in the air so they land on the same colour as themselves</body>
+		</hint1>
+		<hint2>
+			<title>TOP TIP</title>
+			<body>Drop all your sheep to the ground to complete the level</body>
+		</hint2>
+		<hint3>
+			<title>MIND THE BUNTING</title>
+			<body>Don't let sheep pile up higher than this line!</body>
+		</hint3>
+		<hint4>
+			<title>TOP TIP</title>
+			<body>Some levels have obstacles that will get in your way</body>
+		</hint4>
+		<hint5>
+			<title>WILDCARD SHEEP</title>
+			<body>These can act as any colour, use them to finish off a combination</body>
+		</hint5>
+		<hint6>
+			<title>THE BLACK SHEEP</title>
+			<body>These clear the WHOLE board of the colour they land on first</body>
+		</hint6>
+		<hint7>
+			<title>MOVING OBSTACLES</title>
+			<body>Watch out for obstacles that move</body>
+		</hint7>
+	</hints>
+	
+</flock_together>

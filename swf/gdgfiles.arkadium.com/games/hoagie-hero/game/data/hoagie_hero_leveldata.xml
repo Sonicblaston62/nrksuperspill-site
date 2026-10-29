@@ -1,0 +1,3084 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This is example level data.  basicly every game will have some game design data that gets loaded externaly from xml. 
+This provides one very simple method of importing the data into the data manager.
+
+the code will create objects with the associated node names in the data manager.  Just change and add lines and then call the variables.
+-->
+<ignoreMeContainer>
+  <_bVisibleCircles type="Boolean">0</_bVisibleCircles>
+  <!-- use 1 = true or 0 = false -->
+  <_nMultiplierBonus type="Number">0.5</_nMultiplierBonus>
+  <!-- points = [sum of ingredient values](1 + (number of ingredients-1))* multiplierBonus + [sum of ingredient values] * (multiplierCondiment1 + multiplierCondiment2 + ...) -->
+  <_nSpeedShowTips type="Number">75</_nSpeedShowTips>
+  <!-- when show tips in complete level (1000 = one second) -->
+  <_nAutoCompletionLine type="Number">30</_nAutoCompletionLine>
+  <!-- pixel -->
+  <_nMarkerModeTime type="Number">15</_nMarkerModeTime>
+  <!-- mode Marker on ... seconds (one second = 1) -->
+  <_nSprayModeTime type="Number">10</_nSprayModeTime>
+  <!-- mode Spray on ... seconds (one second = 1) -->
+  <_aSprayColor type="Array">0x0099FF,0x99CC00,0xFF0000,0xFFFF00</_aSprayColor>
+  <!-- colors dotted line: white,black,red,blue,green,brown,yellow -->
+  <_sMessage1>Oops! That doesn't look tasty!</_sMessage1>
+  <!-- for Progress Meter (DownPanel) MessagesBubbles -->
+  <_sMessage2>Oops! Wrong ingredients for that sandwich!</_sMessage2>
+  <!-- for Progress Meter (DownPanel) MessagesBubbles -->
+  <_sMessage3>Oops! Condiments need to go with ingredients!</_sMessage3>
+  <!-- for Progress Meter (DownPanel) MessagesBubbles -->
+  <_nTimeRemoveMessage type="Number">8</_nTimeRemoveMessage>
+  <!-- 1 = one second -->
+  <_nLockMission type="Number">0</_nLockMission>
+  <!-- 0 - normal mode, 1 - shows once three missions(only begin with first level), 2 - only begin with first mission -->
+  <_bLogicMaxLevel type="Boolean">0</_bLogicMaxLevel>
+  <!-- for Test: if 1 - use _nMaxLevel for all missions -->
+  <_nMaxLevel type="Number">0</_nMaxLevel>
+  <!-- for Test: if _bLogicMaxLevel = 1 (for test "You Win") -->
+  <_nTimeVeryQuicklyOffScreen type="Number">0.5</_nTimeVeryQuicklyOffScreen>
+  <!-- when end-level, ingredients off screen (1 = one second) -->
+  <_sPerfectMessage1>PERFECT BONUS!</_sPerfectMessage1>
+  <_sPerfectMessage2>DOUBLE BONUS!</_sPerfectMessage2>
+  <_sPerfectMessage3>TRIPLE BONUS!</_sPerfectMessage3>
+  <_sPerfectMessage4>FOUR BONUS!</_sPerfectMessage4>
+  <_sPerfectMessage5>FIVE BONUS!</_sPerfectMessage5>
+  <_sPerfectMessage6>SIX BONUS!</_sPerfectMessage6>
+  <_sPerfectMessage7>SEVEN BONUS!</_sPerfectMessage7>
+  <_sPerfectMessage8>CONDIMENT BONUS!</_sPerfectMessage8>
+  <_nTotalMission type="Number">1</_nTotalMission>
+  <!-- 1,2 or 3 -->
+  <_nNumberBall type="Number">0</_nNumberBall>
+  <!-- only for TEST for Drew (use from 1 to 10), if 0 not use -->
+  <!-- ====================================================================================== -->
+  <Balls>
+    <!-- === right to left === -->
+    <Ball>
+      <_sName>ball1</_sName>
+      <_sUrl>data/pictures/ball1.swf</_sUrl>
+      <_aCoordinates type="Array">825,30</_aCoordinates>
+      <!-- x,y -->
+      <_aShiftXY type="Array">0,200</_aShiftXY>
+      <!-- x = x + random(_aShiftXY[0]), y = y + random(_aShiftXY[1]) -->
+      <_nPoint type="Number">-20</_nPoint>
+    </Ball>
+    
+  </Balls>
+  <!-- ====================================================================================== -->
+  <Animations>
+    <AnimationLevel>
+      <_sName>animation1</_sName>
+      <_sUrl>data/pictures/animation1.swf</_sUrl>
+    </AnimationLevel>
+  </Animations>
+  <!-- ====================================================================================== -->
+  <TipsBonus>
+    <Tips>
+      <_sName>tips1</_sName>
+      <_sUrl>data/pictures/tips1.swf</_sUrl>
+      <_nPoint type="Number">5</_nPoint>
+    </Tips>
+    <Tips>
+      <_sName>tips2</_sName>
+      <_sUrl>data/pictures/tips2.swf</_sUrl>
+      <_nPoint type="Number">10</_nPoint>
+    </Tips>
+    <Tips>
+      <_sName>tips3</_sName>
+      <_sUrl>data/pictures/tips3.swf</_sUrl>
+      <_nPoint type="Number">25</_nPoint>
+    </Tips>
+  </TipsBonus>
+  <!-- ====================================================================================== -->
+  <Ingredients>
+    <Ingredient>
+      <_sName>bread1top</_sName>
+      <_sUrl>data/pictures/bread1top.swf</_sUrl>
+      <_nMinSpeed type="Number">1</_nMinSpeed>
+      <_nMaxSpeed type="Number">1.5</_nMaxSpeed>
+      <_nAppearanceCentre type="Number">100</_nAppearanceCentre>
+      <!-- % it will pop up -->
+      <_nPoint type="Number">1</_nPoint>
+    </Ingredient>
+    <Ingredient>
+      <_sName>bread1btm</_sName>
+      <_sUrl>data/pictures/bread1btm.swf</_sUrl>
+      <_nMinSpeed type="Number">1</_nMinSpeed>
+      <_nMaxSpeed type="Number">1.5</_nMaxSpeed>
+      <_nAppearanceCentre type="Number">50</_nAppearanceCentre>
+      <!-- % it will pop up -->
+      <_nPoint type="Number">1</_nPoint>
+    </Ingredient>
+    <Ingredient>
+      <_sName>bread2top</_sName>
+      <_sUrl>data/pictures/bread2top.swf</_sUrl>
+      <_nMinSpeed type="Number">1</_nMinSpeed>
+      <_nMaxSpeed type="Number">1.5</_nMaxSpeed>
+      <_nAppearanceCentre type="Number">25</_nAppearanceCentre>
+      <!-- % it will pop up -->
+      <_nPoint type="Number">7</_nPoint>
+    </Ingredient>
+    <Ingredient>
+      <_sName>bread2btm</_sName>
+      <_sUrl>data/pictures/bread2btm.swf</_sUrl>
+      <_nMinSpeed type="Number">1</_nMinSpeed>
+      <_nMaxSpeed type="Number">1.5</_nMaxSpeed>
+      <_nAppearanceCentre type="Number">25</_nAppearanceCentre>
+      <!-- % it will pop up -->
+      <_nPoint type="Number">7</_nPoint>
+    </Ingredient>
+    
+    <Ingredient>
+      <_sName>butter</_sName>
+      <_sUrl>data/pictures/butter.swf</_sUrl>
+      <_nMinSpeed type="Number">1</_nMinSpeed>
+      <_nMaxSpeed type="Number">2.5</_nMaxSpeed>
+      <_nAppearanceCentre type="Number">100</_nAppearanceCentre>
+      <!-- % it will pop up -->
+      <_nPoint type="Number">1</_nPoint>
+    </Ingredient>
+    <Ingredient>
+      <_sName>cheese</_sName>
+      <_sUrl>data/pictures/cheese.swf</_sUrl>
+      <_nMinSpeed type="Number">1</_nMinSpeed>
+      <_nMaxSpeed type="Number">2.5</_nMaxSpeed>
+      <_nAppearanceCentre type="Number">50</_nAppearanceCentre>
+      <!-- % it will pop up -->
+      <_nPoint type="Number">2</_nPoint>
+    </Ingredient>
+    <Ingredient>
+      <_sName>ham</_sName>
+      <_sUrl>data/pictures/ham.swf</_sUrl>
+      <_nMinSpeed type="Number">3</_nMinSpeed>
+      <_nMaxSpeed type="Number">4</_nMaxSpeed>
+      <_nAppearanceCentre type="Number">0</_nAppearanceCentre>
+      <!-- % it will pop up -->
+      <_nPoint type="Number">5</_nPoint>
+    </Ingredient>
+    <Ingredient>
+      <_sName>bacon</_sName>
+      <_sUrl>data/pictures/bacon.swf</_sUrl>
+      <_nMinSpeed type="Number">2</_nMinSpeed>
+      <_nMaxSpeed type="Number">3</_nMaxSpeed>
+      <_nAppearanceCentre type="Number">0</_nAppearanceCentre>
+      <!-- % it will pop up -->
+      <_nPoint type="Number">6</_nPoint>
+    </Ingredient>
+    <Ingredient>
+      <_sName>hamburger</_sName>
+      <_sUrl>data/pictures/hamburger.swf</_sUrl>
+      <_nMinSpeed type="Number">2</_nMinSpeed>
+      <_nMaxSpeed type="Number">3.5</_nMaxSpeed>
+      <_nAppearanceCentre type="Number">0</_nAppearanceCentre>
+      <!-- % it will pop up -->
+      <_nPoint type="Number">7</_nPoint>
+    </Ingredient>
+    <Ingredient>
+      <_sName>lettuce</_sName>
+      <_sUrl>data/pictures/lettuce.swf</_sUrl>
+      <_nMinSpeed type="Number">.5</_nMinSpeed>
+      <_nMaxSpeed type="Number">2</_nMaxSpeed>
+      <_nAppearanceCentre type="Number">100</_nAppearanceCentre>
+      <!-- % it will pop up -->
+      <_nPoint type="Number">2</_nPoint>
+    </Ingredient>
+    <Ingredient>
+      <_sName>tomato</_sName>
+      <_sUrl>data/pictures/tomato.swf</_sUrl>
+      <_nMinSpeed type="Number">.5</_nMinSpeed>
+      <_nMaxSpeed type="Number">2</_nMaxSpeed>
+      <_nAppearanceCentre type="Number">50</_nAppearanceCentre>
+      <!-- % it will pop up -->
+      <_nPoint type="Number">2</_nPoint>
+    </Ingredient>
+    
+    <Ingredient>
+      <_sName>marshmallow</_sName>
+      <_sUrl>data/pictures/marshmallows.swf</_sUrl>
+      <_nMinSpeed type="Number">2</_nMinSpeed>
+      <_nMaxSpeed type="Number">3</_nMaxSpeed>
+      <_nAppearanceCentre type="Number">0</_nAppearanceCentre>
+      <!-- % it will pop up -->
+    </Ingredient>
+  </Ingredients>
+  <!-- ====================================================================================== -->
+  <Sandwiches>
+    <!-- butter sandwiches  0xFDABFE-->
+    <Sandwich>
+      <_sSandwichName>BUTTER</_sSandwichName>
+      <_aSandwichIngredients type="Array">butter,bread1top</_aSandwichIngredients>
+      <_aSandwichColor type="Array">0xF8F721,0xF8CE29,0xC19C0B,0xC19C0B,0xFFFFFF</_aSandwichColor>
+      <!-- 0:background name, 1:background under ingredients, 2:background under all and under score, 3:text name, 4:text point -->
+      <_nBaseSandwichValue type="Number">10</_nBaseSandwichValue>
+      <_nPerfectSandwichPointBonus type="Number">5</_nPerfectSandwichPointBonus>
+    </Sandwich>
+    <!-- ham sandwiches  0xFFA9E2-->
+    <Sandwich>
+      <_sSandwichName>HAM</_sSandwichName>
+      <_aSandwichIngredients type="Array">bread1top,ham,bread1top</_aSandwichIngredients>
+      <_aSandwichColor type="Array">0xFCBD94,0xFEEADE,0xE94949,0xE94949,0xFEEADE</_aSandwichColor>
+      <!-- 0:background name, 1:background under ingredients, 2:background under all and under score, 3:text name, 4:text point -->
+      <_nBaseSandwichValue type="Number">20</_nBaseSandwichValue>
+      <_nPerfectSandwichPointBonus type="Number">15</_nPerfectSandwichPointBonus>
+    </Sandwich>
+    <Sandwich>
+      <_sSandwichName>HAM+</_sSandwichName>
+      <_aSandwichIngredients type="Array">bread1top,ham,cheese,bread1top</_aSandwichIngredients>
+      <_aSandwichColor type="Array">0xFCD783,0xFEEADE,0xE94949,0xE94949,0xFCD783</_aSandwichColor>
+      <!-- 0:background name, 1:background under ingredients, 2:background under all and under score, 3:text name, 4:text point -->
+      <_nBaseSandwichValue type="Number">30</_nBaseSandwichValue>
+      <_nPerfectSandwichPointBonus type="Number">30</_nPerfectSandwichPointBonus>
+    </Sandwich>
+    <Sandwich>
+      <_sSandwichName>HAM-X</_sSandwichName>
+      <_aSandwichIngredients type="Array">bread1top,ham,ham,ham,ham,ham,ham,bread1top</_aSandwichIngredients>
+      <_aSandwichColor type="Array">0xE94949,0xFCBD94,0xAE1515,0xFDFD2D,0xFDFD2D</_aSandwichColor>
+      <_nBaseSandwichValue type="Number">30</_nBaseSandwichValue>
+      <_nPerfectSandwichPointBonus type="Number">60</_nPerfectSandwichPointBonus>
+    </Sandwich>
+    <!-- Grilled CHEESE  0xFDC43E-->
+    <Sandwich>
+      <_sSandwichName>CHEESE</_sSandwichName>
+      <_aSandwichIngredients type="Array">cheese,bread1top</_aSandwichIngredients>
+      <_aSandwichColor type="Array">0xFFFFFF,0xFDD882,0xF9AF06,0xF9AF06,0xFFFFFF</_aSandwichColor>
+      <_nBaseSandwichValue type="Number">10</_nBaseSandwichValue>
+      <_nPerfectSandwichPointBonus type="Number">5</_nPerfectSandwichPointBonus>
+    </Sandwich>
+    <Sandwich>
+      <_sSandwichName>GRILL-C</_sSandwichName>
+      <_aSandwichIngredients type="Array">bread1top,cheese,bread1top</_aSandwichIngredients>
+      <_aSandwichColor type="Array">0xFCC850,0xFDD882,0xE09E05,0xFFFFFF,0xFFFFFF</_aSandwichColor>
+      <_nBaseSandwichValue type="Number">20</_nBaseSandwichValue>
+      <_nPerfectSandwichPointBonus type="Number">10</_nPerfectSandwichPointBonus>
+    </Sandwich>
+    <Sandwich>
+      <_sSandwichName>GRILL-C+T</_sSandwichName>
+      <_aSandwichIngredients type="Array">bread1top,tomato,cheese,bread1top</_aSandwichIngredients>
+      <_aSandwichColor type="Array">0xC78C05,0xFCC850,0x9E7003,0xFCD783,0xFCD783</_aSandwichColor>
+      <_nBaseSandwichValue type="Number">25</_nBaseSandwichValue>
+      <_nPerfectSandwichPointBonus type="Number">20</_nPerfectSandwichPointBonus>
+    </Sandwich>
+    <Sandwich>
+      <_sSandwichName>CHEESY</_sSandwichName>
+      <_aSandwichIngredients type="Array">bread1top,cheese,cheese,cheese,bread1top</_aSandwichIngredients>
+      <_aSandwichColor type="Array">0xFDE7B5,0xFCC850,0xDA9903,0xDA9903,0xFFFFFF</_aSandwichColor>
+      <_nBaseSandwichValue type="Number">30</_nBaseSandwichValue>
+      <_nPerfectSandwichPointBonus type="Number">40</_nPerfectSandwichPointBonus>
+    </Sandwich>
+    <!-- Salads  0x33CC00-->
+    <Sandwich>
+      <_sSandwichName>SALAD</_sSandwichName>
+      <_aSandwichIngredients type="Array">lettuce,tomato</_aSandwichIngredients>
+      <_aSandwichColor type="Array">0xFFFFFF,0x95FE67,0x33CC00,0x33CC00,0xC5FEAB</_aSandwichColor>
+      <_nBaseSandwichValue type="Number">10</_nBaseSandwichValue>
+      <_nPerfectSandwichPointBonus type="Number">5</_nPerfectSandwichPointBonus>
+    </Sandwich>
+    <Sandwich>
+      <_sSandwichName>VEGIWICH</_sSandwichName>
+      <_aSandwichIngredients type="Array">bread1top,lettuce,tomato,bread1top</_aSandwichIngredients>
+      <_aSandwichColor type="Array">0xE2FED6,0x95FE67,0x33CC00,0x33CC00,0xE2FED6</_aSandwichColor>
+      <_nBaseSandwichValue type="Number">20</_nBaseSandwichValue>
+      <_nPerfectSandwichPointBonus type="Number">20</_nPerfectSandwichPointBonus>
+    </Sandwich>
+    <Sandwich>
+      <_sSandwichName>LETTUCE</_sSandwichName>
+      <_aSandwichIngredients type="Array">bread1top,lettuce,bread1top</_aSandwichIngredients>
+      <_aSandwichColor type="Array">0xB3FE92,0xD7FEC5,0x77F821,0x33CC00,0x33CC00</_aSandwichColor>
+      <_nBaseSandwichValue type="Number">15</_nBaseSandwichValue>
+      <_nPerfectSandwichPointBonus type="Number">10</_nPerfectSandwichPointBonus>
+    </Sandwich>
+    <Sandwich>
+      <_sSandwichName>TOMATO</_sSandwichName>
+      <_aSandwichIngredients type="Array">bread1top,tomato,bread1top</_aSandwichIngredients>
+      <_aSandwichColor type="Array">0xFD9393,0xFED6D6,0xFC4747,0xFC4747,0xFFFFFF</_aSandwichColor>
+      <_nBaseSandwichValue type="Number">15</_nBaseSandwichValue>
+      <_nPerfectSandwichPointBonus type="Number">10</_nPerfectSandwichPointBonus>
+    </Sandwich>
+    <!-- BLT  0xCC66CC-->
+    <Sandwich>
+      <_sSandwichName>BLT</_sSandwichName>
+      <_aSandwichIngredients type="Array">bread1top,bacon,lettuce,tomato,bread1top</_aSandwichIngredients>
+      <_aSandwichColor type="Array">0xFED6D6,0xFC7272,0xAF741D,0xAF741D,0xFED6D6</_aSandwichColor>
+      <_nBaseSandwichValue type="Number">40</_nBaseSandwichValue>
+      <_nPerfectSandwichPointBonus type="Number">50</_nPerfectSandwichPointBonus>
+    </Sandwich>
+    <!-- BACON  0xD03928-->
+    <Sandwich>
+      <_sSandwichName>BACON</_sSandwichName>
+      <_aSandwichIngredients type="Array">bread2top,bacon,bread2btm</_aSandwichIngredients>
+      <_aSandwichColor type="Array">0xFD9B9B,0xFED6D6,0xAF741D,0xFA4141,0xFED6D6</_aSandwichColor>
+      <_nBaseSandwichValue type="Number">30</_nBaseSandwichValue>
+      <_nPerfectSandwichPointBonus type="Number">30</_nPerfectSandwichPointBonus>
+    </Sandwich>
+    <Sandwich>
+      <_sSandwichName>BACON+</_sSandwichName>
+      <_aSandwichIngredients type="Array">bread2top,bacon,cheese,bread2btm</_aSandwichIngredients>
+      <_aSandwichColor type="Array">0xFDA4A4,0xF3DAB6,0xFA4141,0xAF741D,0xF3DAB6</_aSandwichColor>
+      <_nBaseSandwichValue type="Number">40</_nBaseSandwichValue>
+      <_nPerfectSandwichPointBonus type="Number">50</_nPerfectSandwichPointBonus>
+    </Sandwich>
+    <Sandwich>
+      <_sSandwichName>BACONATOR</_sSandwichName>
+      <_aSandwichIngredients type="Array">bread2top,bacon,bacon,bacon,bread2btm</_aSandwichIngredients>
+      <_aSandwichColor type="Array">0xFDA4A4,0xF3DAB6,0xAF741D,0xAF741D,0xF3DAB6</_aSandwichColor>
+      <_nBaseSandwichValue type="Number">50</_nBaseSandwichValue>
+      <_nPerfectSandwichPointBonus type="Number">70</_nPerfectSandwichPointBonus>
+    </Sandwich>
+    
+    <!-- Burger  0xD03928-->
+    <Sandwich>
+      <_sSandwichName>BURG</_sSandwichName>
+      <_aSandwichIngredients type="Array">bread2top,hamburger,bread2btm</_aSandwichIngredients>
+      <_aSandwichColor type="Array">0xFB9B0D,0xFEE7C5,0xBA7001,0xBA7001,0xFEE7C5</_aSandwichColor>
+      <!-- 0:background name, 1:background under ingredients, 2:background under all and under score, 3:text name, 4:text point -->
+      <_nBaseSandwichValue type="Number">30</_nBaseSandwichValue>
+      <_nPerfectSandwichPointBonus type="Number">30</_nPerfectSandwichPointBonus>
+    </Sandwich>
+    <Sandwich>
+      <_sSandwichName>C-BURG</_sSandwichName>
+      <_aSandwichIngredients type="Array">bread2top,cheese,hamburger,bread2btm</_aSandwichIngredients>
+      <_aSandwichColor type="Array">0xFB9B0D,0xFFCC00,0xBA7001,0xBA7001,0xFFCC00</_aSandwichColor>
+      <!-- 0:background name, 1:background under ingredients, 2:background under all and under score, 3:text name, 4:text point -->
+      <_nBaseSandwichValue type="Number">40</_nBaseSandwichValue>
+      <_nPerfectSandwichPointBonus type="Number">45</_nPerfectSandwichPointBonus>
+    </Sandwich>
+	 <Sandwich>
+      <_sSandwichName>TOP SECRET</_sSandwichName>
+      <_aSandwichIngredients type="Array">bread2top,marshmallow,hamburger,marshmallow,bread2btm</_aSandwichIngredients>
+      <_aSandwichColor type="Array">0xFB9B0D,0xFFCC00,0xBA7001,0xBA7001,0xFFCC00</_aSandwichColor>
+      <!-- 0:background name, 1:background under ingredients, 2:background under all and under score, 3:text name, 4:text point -->
+      <_nBaseSandwichValue type="Number">50</_nBaseSandwichValue>
+      <_nPerfectSandwichPointBonus type="Number">45</_nPerfectSandwichPointBonus>
+    </Sandwich>
+    <Sandwich>
+      <_sSandwichName>V-BURG</_sSandwichName>
+      <_aSandwichIngredients type="Array">bread2top,tomato,lettuce,hamburger,bread2btm</_aSandwichIngredients>
+      <_aSandwichColor type="Array">0xFB9B0D,0xFFCC00,0xE34502,0xE34502,0xFFCC00</_aSandwichColor>
+      <!-- 0:background name, 1:background under ingredients, 2:background under all and under score, 3:text name, 4:text point -->
+      <_nBaseSandwichValue type="Number">40</_nBaseSandwichValue>
+      <_nPerfectSandwichPointBonus type="Number">45</_nPerfectSandwichPointBonus>
+    </Sandwich>
+   
+    <Sandwich>
+      <_sSandwichName>BACON-BURG</_sSandwichName>
+      <_aSandwichIngredients type="Array">bread2top,cheese,bacon,hamburger,bread2btm</_aSandwichIngredients>
+      <_aSandwichColor type="Array">0x9D6004,0xFFCC00,0xD68307,0xFDCECE,0xFDCECE</_aSandwichColor>
+      <!-- 0:background name, 1:background under ingredients, 2:background under all and under score, 3:text name, 4:text point -->
+      <_nBaseSandwichValue type="Number">50</_nBaseSandwichValue>
+      <_nPerfectSandwichPointBonus type="Number">60</_nPerfectSandwichPointBonus>
+    </Sandwich>
+    <Sandwich>
+      <_sSandwichName>HERO-BURG</_sSandwichName>
+      <_aSandwichIngredients type="Array">bread2top,hamburger,cheese,bacon,lettuce,bread2btm</_aSandwichIngredients>
+      <_aSandwichColor type="Array">0xD68307,0xFFCC00,0x9C6005,0xFFFF00,0xFFFF00</_aSandwichColor>
+      <!-- 0:background name, 1:background under ingredients, 2:background under all and under score, 3:text name, 4:text point -->
+      <_nBaseSandwichValue type="Number">70</_nBaseSandwichValue>
+      <_nPerfectSandwichPointBonus type="Number">100</_nPerfectSandwichPointBonus>
+    </Sandwich>
+    
+  </Sandwiches>
+  <!-- ====================================================================================== -->
+  <Condiments>
+    <Condiment>
+      <_sName>salt</_sName>
+      <_sUrl>data/pictures/salt.swf</_sUrl>
+      <_nMinSpeed type="Number">1</_nMinSpeed>
+      <_nMaxSpeed type="Number">2</_nMaxSpeed>
+      <_nAppearanceCentre type="Number">50</_nAppearanceCentre>
+      <!-- % it will pop up -->
+      <_nPoint type="Number">1.5</_nPoint>
+    </Condiment>
+    
+  </Condiments>
+  <!-- ====================================================================================== -->
+  <Inedibles>
+    <Inedible>
+      <_sName>tack</_sName>
+      <_sUrl>data/pictures/tack.swf</_sUrl>
+      <_nMinSpeed type="Number">1</_nMinSpeed>
+      <_nMaxSpeed type="Number">2</_nMaxSpeed>
+      <_nAppearanceCentre type="Number">0</_nAppearanceCentre>
+      <!-- % it will pop up -->
+      <_nPoint type="Number">-100</_nPoint>
+    </Inedible>
+    
+  </Inedibles>
+  <!-- ====================================================================================== -->
+  <Snacks>
+    
+    <Snack>
+      <_sName>egg</_sName>
+      <_sUrl>data/pictures/egg.swf</_sUrl>
+      <_nMinSpeed type="Number">1</_nMinSpeed>
+      <_nMaxSpeed type="Number">2</_nMaxSpeed>
+      <_nAppearanceCentre type="Number">50</_nAppearanceCentre>
+      <!-- % it will pop up -->
+      <_nPoint type="Number">0</_nPoint>
+    </Snack>
+    <Snack>
+      <_sName>markermode</_sName>
+      <_sUrl>data/pictures/markermode.swf</_sUrl>
+      <_nMinSpeed type="Number">1</_nMinSpeed>
+      <_nMaxSpeed type="Number">2</_nMaxSpeed>
+      <_nAppearanceCentre type="Number">50</_nAppearanceCentre>
+      <!-- % it will pop up -->
+      <_nPoint type="Number">0</_nPoint>
+    </Snack>
+    <Snack>
+      <_sName>eggtips</_sName>
+      <_sUrl>data/pictures/eggtips.swf</_sUrl>
+      <_nMinSpeed type="Number">1</_nMinSpeed>
+      <_nMaxSpeed type="Number">2</_nMaxSpeed>
+      <_nAppearanceCentre type="Number">50</_nAppearanceCentre>
+      <!-- % it will pop up -->
+      <_nPoint type="Number">0</_nPoint>
+    </Snack>
+    <Snack>
+      <_sName>spraymode</_sName>
+      <_sUrl>data/pictures/spraymode.swf</_sUrl>
+      <_nMinSpeed type="Number">1</_nMinSpeed>
+      <_nMaxSpeed type="Number">2</_nMaxSpeed>
+      <_nAppearanceCentre type="Number">50</_nAppearanceCentre>
+      <!-- % it will pop up -->
+      <_nPoint type="Number">0</_nPoint>
+    </Snack>
+  </Snacks>
+  <!-- ====================================== MISSION 0 EASY LEVELS ====================================== -->
+  <!-- ====================================== MISSION 0 EASY LEVELS ====================================== -->
+  <!-- ====================================== MISSION 0 EASY LEVELS ====================================== -->
+  <Mission>
+    <Level>
+      <!-- concept: teaches player how to circle sandwiches.  Simple Satisfying 
+			one sandwich at a time
+			2000 points
+			-->
+      <_nLevel type="Number">0</_nLevel>
+      <_sTextBeforeLevel>The World Needs a Hero</_sTextBeforeLevel>
+      <_sUrlInfoScreen>data/pictures/infoscreen01.swf</_sUrlInfoScreen>
+      <_aInfoScreenXY type="Array">0,0</_aInfoScreenXY>
+      <!-- coordinates X and Y -->
+      <_nBackgroundFrame type="Number">1</_nBackgroundFrame>
+      <!-- Background frame -->
+      <_nPointsCompleteLevel type="Number">130</_nPointsCompleteLevel>
+      <_nTimeCompleteLevel type="Number">100</_nTimeCompleteLevel>
+      <!-- one second = 1 -->
+      <_nTimeBonusPointsPerSecond type="Number">.5</_nTimeBonusPointsPerSecond>
+      <!-- bonus per second -->
+      <_nMaxNumberIngredientsOnScreen type="Number">6</_nMaxNumberIngredientsOnScreen>
+      <_bPoppingUpOn type="Boolean">1</_bPoppingUpOn>
+      <!-- use 1 = true or 0 = false (fall down the ingredients or not) -->
+      <_nPointTouchWithLine type="Number">-1</_nPointTouchWithLine>
+      <!-- minus point, when ingredient touch with line -->
+      <_nTipMinSpeed type="Number">4</_nTipMinSpeed>
+      <_nTipMaxSpeed type="Number">12</_nTipMaxSpeed>
+      <_nTipLifeTime type="Number">6</_nTipLifeTime>
+      <!-- one second = 1 -->
+      <_aConponentFirstDelayTime type="Array">0,5</_aConponentFirstDelayTime>
+      <!-- one second = 1 -->
+      <_aCondimentRepeatThrough type="Array">15,60</_aCondimentRepeatThrough>
+      <!-- one second = 1 -->
+      <_aInedibleRepeatThrough type="Array">15,60</_aInedibleRepeatThrough>
+      <!-- one second = 1 -->
+      <_aSnackRepeatThrough type="Array">15,60</_aSnackRepeatThrough>
+      <!-- one second = 1 -->
+      <_bBallShow type="Boolean">0</_bBallShow>
+      <!-- 1 = true, 0 = false -->
+      <_aBallRepeatThrough type="Array">15,60</_aBallRepeatThrough>
+      <!-- one second = 1 -->
+      <_nEggBonus type="Number">10</_nEggBonus>
+      <!-- one second = 1, plus Time -->
+      <_aRectangle type="Array">250,200,550,400</_aRectangle>
+      <!-- (X0,Y0,X1,Y1) for falling objects down (XO < X1 and YO < Y1) -->
+      <_nAnimationLineSpeed type="Number">8</_nAnimationLineSpeed>
+      <!-- one second = 1000 -->
+      <_bShowAnimation type="Boolean">1</_bShowAnimation>
+      <!-- use 1 = true or 0 = false (for Car in "level-window") -->
+      <_sNameAnimation>animation1</_sNameAnimation>
+      <_bSoundAnimation type="Boolean">0</_bSoundAnimation>
+      <!-- use 1 = true ("off" default sound in game) or 0 = false ("on" default sound in game) -->
+      <_nTimeCreateSandwich type="Number">100</_nTimeCreateSandwich>
+      <!-- new sandwich fall down (one second = 1) -->
+      <_nMaxSandwiches type="Number">3</_nMaxSandwiches>
+      <!-- maximum sandwiches in left panel -->
+      <_nTimePrompt type="Number">30</_nTimePrompt>
+      <!-- Show Prompt, if a player does not catch the ingredients in the passage of time -->
+      <_nNumberEggTips type="Number">20</_nNumberEggTips>
+      <!-- number Tips for "eggtips" (If you circle this egg it will explode and tips shoot out from it in all directions.) -->
+      <!-- ======================================== -->
+      <!--<Sandwich>
+				<_sName>SUPER BIG-HOAGIE</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>HAM</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>HAM+</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			-->
+      <Sandwich>
+        <_sName>BUTTER</_sName>
+        <_nAppearance type="Number">10</_nAppearance>
+      </Sandwich>
+      <Sandwich>
+        <_sName>LETTUCE</_sName>
+        <_nAppearance type="Number">10</_nAppearance>
+      </Sandwich>
+      <!--
+			<Sandwich>
+				<_sName>GRILL-C</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>GRILL-C+T</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>SALAD</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>VEGIWICH</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BLT</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BLT</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BACONATOR</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>FISH</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>HB</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich> -->
+      <!-- ========================================-->
+      <!--<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment> 
+			<Condiment>
+				<_sName>salt</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>pepper</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>ketchup</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>mustard</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment> 
+			<Condiment>
+				<_sName>mayonnaise</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment> -->
+      <!-- ======================================== -->
+      <!--<Inedible>
+				<_sName>tack</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>
+			<Inedible>
+				<_sName>marble</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>
+			<Inedible>
+				<_sName>airfreshener</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>-->
+      <!-- ======================================== -->
+      <!--<Snack>
+				<_sName>cookie1</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>
+			<Snack>
+				<_sName>cookie2</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>
+			<Snack> 
+				<_sName>egg</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack> 
+			<Snack>
+				<_sName>markermode</_sName>
+				<_nAppearance type="Number">97</_nAppearance>
+			</Snack>
+			<Snack>
+				<_sName>eggtips</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Snack> -->
+    </Level>
+    <Level>
+      <!-- concept: teaches about timer and the truck, simple, a bit longer and larger sandwich based on same ingredients
+		The player will start seeing more sandwiches on the left if they are not a bit quick fast.
+		-->
+      <_nLevel type="Number">1</_nLevel>
+      <_sTextBeforeLevel>A Path Paved With Sandwich Goodness</_sTextBeforeLevel>
+      <_sUrlInfoScreen>data/pictures/infoscreen02.swf</_sUrlInfoScreen>
+      <_aInfoScreenXY type="Array">0,0</_aInfoScreenXY>
+      <!-- coordinates X and Y -->
+      <_nPointsCompleteLevel type="Number">300</_nPointsCompleteLevel>
+      <_nTimeCompleteLevel type="Number">120</_nTimeCompleteLevel>
+      <!-- one second = 1 -->
+      <_nBackgroundFrame type="Number">2</_nBackgroundFrame>
+      <!-- Background frame -->
+      <_nTipMinSpeed type="Number">3</_nTipMinSpeed>
+      <_nTipMaxSpeed type="Number">11</_nTipMaxSpeed>
+      <_nTipLifeTime type="Number">8</_nTipLifeTime>
+      <!-- one second = 1 -->
+      <_nMaxNumberIngredientsOnScreen type="Number">7</_nMaxNumberIngredientsOnScreen>
+      <_aConponentFirstDelayTime type="Array">0,5</_aConponentFirstDelayTime>
+      <!-- one second = 1 -->
+      <_aCondimentRepeatThrough type="Array">0,15</_aCondimentRepeatThrough>
+      <!-- one second = 1 -->
+      <_aInedibleRepeatThrough type="Array">15,60</_aInedibleRepeatThrough>
+      <!-- one second = 1 -->
+      <_aSnackRepeatThrough type="Array">30,80</_aSnackRepeatThrough>
+      <!-- one second = 1 -->
+      <_bBallShow type="Boolean">0</_bBallShow>
+      <!-- 1 = true, 0 = false -->
+      <_aBallRepeatThrough type="Array">15,60</_aBallRepeatThrough>
+      <!-- one second = 1 -->
+      <_nTimeBonusPointsPerSecond type="Number">1</_nTimeBonusPointsPerSecond>
+      <!-- bonus per second -->
+      <_nEggBonus type="Number">10</_nEggBonus>
+      <!-- one second = 1, plus Time -->
+      <_bPoppingUpOn type="Boolean">1</_bPoppingUpOn>
+      <!-- use 1 = true or 0 = false (fall down the ingredients or not) -->
+      <_aRectangle type="Array">250,200,550,400</_aRectangle>
+      <!-- (X0,Y0,X1,Y1) for falling objects down (XO < X1 and YO < Y1) -->
+      <_nPointTouchWithLine type="Number">-2</_nPointTouchWithLine>
+      <!-- minus point, when ingredient touch with line -->
+      <_nAnimationLineSpeed type="Number">8</_nAnimationLineSpeed>
+      <!-- one second = 1000 -->
+      <_bShowAnimation type="Boolean">0</_bShowAnimation>
+      <!-- use 1 = true or 0 = false (for Car in "level-window") -->
+      <_sNameAnimation>animation1</_sNameAnimation>
+      <_bSoundAnimation type="Boolean">0</_bSoundAnimation>
+      <!-- use 1 = true ("off" default sound in game) or 0 = false ("on" default sound in game) -->
+      <_nTimeCreateSandwich type="Number">8</_nTimeCreateSandwich>
+      <!-- new sandwich fall down (one second = 1) -->
+      <_nMaxSandwiches type="Number">4</_nMaxSandwiches>
+      <!-- maximum sandwiches in left panel -->
+      <_nTimePrompt type="Number">30</_nTimePrompt>
+      <!-- Show Prompt, if a player does not catch the ingredients in the passage of time -->
+      <_nNumberEggTips type="Number">5</_nNumberEggTips>
+      <!-- number Tips for "eggtips" (If you circle this egg it will explode and tips shoot out from it in all directions.) -->
+      <!-- ======================================== -->
+      <!--<Sandwich>
+				<_sName>HAM</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>HAM+</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BIG HAMMY</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>-->
+      <Sandwich>
+        <_sName>LETTUCE</_sName>
+        <_nAppearance type="Number">10</_nAppearance>
+      </Sandwich>
+      <Sandwich>
+        <_sName>TOMATO</_sName>
+        <_nAppearance type="Number">10</_nAppearance>
+      </Sandwich>
+      <!--<Sandwich>
+				<_sName>GRILL-C+T</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>SALAD</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>VEGIWICH</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BLT</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BLT</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BACONATOR</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>-->
+      <!-- ========================================-->
+      <!--<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>salt</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>pepper</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>ketchup</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>mustard</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>mayonnaise</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>-->
+      <!-- ======================================== -->
+      <!--<Inedible>
+				<_sName>tack</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>
+			<Inedible>
+				<_sName>marble</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>
+			<Inedible>
+				<_sName>airfreshener</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>-->
+      <!-- ======================================== -->
+      <!--<Snack>
+				<_sName>cookie1</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>
+			<Snack>
+				<_sName>cookie2</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>
+			<Snack>
+				<_sName>egg</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>
+			<Snack>
+				<_sName>markermode</_sName>
+				<_nAppearance type="Number">97</_nAppearance>
+			</Snack>
+			<Snack>
+				<_sName>eggtips</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Snack> -->
+    </Level>
+    <Level>
+      <!-- concept: teaches about the perfect sandwich -->
+      <_nLevel type="Number">2</_nLevel>
+      <_sTextBeforeLevel>Tips of the Trade</_sTextBeforeLevel>
+      <_sUrlInfoScreen>data/pictures/infoscreen03.swf</_sUrlInfoScreen>
+      <_aInfoScreenXY type="Array">0,0</_aInfoScreenXY>
+      <!-- coordinates X and Y -->
+      <_nPointsCompleteLevel type="Number">800</_nPointsCompleteLevel>
+      <_nTimeCompleteLevel type="Number">130</_nTimeCompleteLevel>
+      <!-- one second = 1 -->
+      <_nBackgroundFrame type="Number">3</_nBackgroundFrame>
+      <!-- Background frame -->
+      <_nTipMinSpeed type="Number">3</_nTipMinSpeed>
+      <_nTipMaxSpeed type="Number">11</_nTipMaxSpeed>
+      <_nTipLifeTime type="Number">8</_nTipLifeTime>
+      <!-- one second = 1 -->
+      <_nMaxNumberIngredientsOnScreen type="Number">8</_nMaxNumberIngredientsOnScreen>
+      <_aConponentFirstDelayTime type="Array">0,5</_aConponentFirstDelayTime>
+      <!-- one second = 1 -->
+      <_aCondimentRepeatThrough type="Array">0,20</_aCondimentRepeatThrough>
+      <!-- one second = 1 -->
+      <_aInedibleRepeatThrough type="Array">15,60</_aInedibleRepeatThrough>
+      <!-- one second = 1 -->
+      <_aSnackRepeatThrough type="Array">30,80</_aSnackRepeatThrough>
+      <!-- one second = 1 -->
+      <_bBallShow type="Boolean">0</_bBallShow>
+      <!-- 1 = true, 0 = false -->
+      <_aBallRepeatThrough type="Array">15,60</_aBallRepeatThrough>
+      <!-- one second = 1 -->
+      <_nTimeBonusPointsPerSecond type="Number">3</_nTimeBonusPointsPerSecond>
+      <!-- bonus per second -->
+      <_nEggBonus type="Number">10</_nEggBonus>
+      <!-- one second = 1, plus Time -->
+      <_bPoppingUpOn type="Boolean">1</_bPoppingUpOn>
+      <!-- use 1 = true or 0 = false (fall down the ingredients or not) -->
+      <_aRectangle type="Array">250,200,550,400</_aRectangle>
+      <!-- (X0,Y0,X1,Y1) for falling objects down (XO < X1 and YO < Y1) -->
+      <_nPointTouchWithLine type="Number">-2</_nPointTouchWithLine>
+      <!-- minus point, when ingredient touch with line -->
+      <_nAnimationLineSpeed type="Number">8</_nAnimationLineSpeed>
+      <!-- one second = 1000 -->
+      <_bShowAnimation type="Boolean">0</_bShowAnimation>
+      <!-- use 1 = true or 0 = false (for Car in "level-window") -->
+      <_sNameAnimation>animation1</_sNameAnimation>
+      <_bSoundAnimation type="Boolean">0</_bSoundAnimation>
+      <!-- use 1 = true ("off" default sound in game) or 0 = false ("on" default sound in game) -->
+      <_nTimeCreateSandwich type="Number">8</_nTimeCreateSandwich>
+      <!-- new sandwich fall down (one second = 1) -->
+      <_nMaxSandwiches type="Number">4</_nMaxSandwiches>
+      <!-- maximum sandwiches in left panel -->
+      <_nTimePrompt type="Number">30</_nTimePrompt>
+      <!-- Show Prompt, if a player does not catch the ingredients in the passage of time -->
+      <_nNumberEggTips type="Number">20</_nNumberEggTips>
+      <!-- number Tips for "eggtips" (If you circle this egg it will explode and tips shoot out from it in all directions.) -->
+      <!-- ======================================== -->
+      <!--<Sandwich>
+				<_sName>HAM</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>HAM+</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BIG HAMMY</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>CHEESE</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>-->
+      <Sandwich>
+        <_sName>CHEESY</_sName>
+        <_nAppearance type="Number">10</_nAppearance>
+      </Sandwich>
+      <Sandwich>
+        <_sName>VEGIWICH</_sName>
+        <_nAppearance type="Number">10</_nAppearance>
+      </Sandwich>
+      <!--<Sandwich>
+				<_sName>GRILL-C+T</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>SALAD</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>VEGIWICH</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BLT</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BLT</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BACONATOR</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>-->
+      <!-- ========================================-->
+      <!--<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>salt</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>pepper</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>ketchup</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>mustard</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>-->
+      <!--<Condiment>
+				<_sName>mayonnaise</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>-->
+      <!-- ======================================== -->
+      <!--<Inedible>
+				<_sName>tack</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>
+			<Inedible>
+				<_sName>marble</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>
+			<Inedible>
+				<_sName>airfreshener</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>-->
+      <!-- ======================================== -->
+      <!--<Snack>
+				<_sName>cookie1</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>
+			<Snack>
+				<_sName>cookie2</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>
+			<Snack>
+				<_sName>egg</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>
+			-->
+      <!--<Snack>
+				<_sName>markermode</_sName>
+				<_nAppearance type="Number">97</_nAppearance>
+			</Snack>-->
+    </Level>
+    <Level>
+      <!-- concept: teaches player how to circle sandwiches.  Simple Satisfying -->
+      <_nLevel type="Number">3</_nLevel>
+      <_sTextBeforeLevel>Inventive Ingredients</_sTextBeforeLevel>
+      <_sUrlInfoScreen>data/pictures/infoscreen04.swf</_sUrlInfoScreen>
+      <_aInfoScreenXY type="Array">0,0</_aInfoScreenXY>
+      <!-- coordinates X and Y -->
+      <_nPointsCompleteLevel type="Number">1200</_nPointsCompleteLevel>
+      <_nTimeCompleteLevel type="Number">120</_nTimeCompleteLevel>
+      <!-- one second = 1 -->
+      <_nBackgroundFrame type="Number">4</_nBackgroundFrame>
+      <!-- Background frame -->
+      <_nTipMinSpeed type="Number">3</_nTipMinSpeed>
+      <_nTipMaxSpeed type="Number">11</_nTipMaxSpeed>
+      <_nTipLifeTime type="Number">8</_nTipLifeTime>
+      <!-- one second = 1 -->
+      <_nMaxNumberIngredientsOnScreen type="Number">8</_nMaxNumberIngredientsOnScreen>
+      <_aConponentFirstDelayTime type="Array">0,5</_aConponentFirstDelayTime>
+      <!-- one second = 1 -->
+      <_aCondimentRepeatThrough type="Array">0,15</_aCondimentRepeatThrough>
+      <!-- one second = 1 -->
+      <_aInedibleRepeatThrough type="Array">15,60</_aInedibleRepeatThrough>
+      <!-- one second = 1 -->
+      <_aSnackRepeatThrough type="Array">20,80</_aSnackRepeatThrough>
+      <!-- one second = 1 -->
+      <_bBallShow type="Boolean">0</_bBallShow>
+      <!-- 1 = true, 0 = false -->
+      <_aBallRepeatThrough type="Array">15,60</_aBallRepeatThrough>
+      <!-- one second = 1 -->
+      <_nTimeBonusPointsPerSecond type="Number">4</_nTimeBonusPointsPerSecond>
+      <!-- bonus per second -->
+      <_nEggBonus type="Number">10</_nEggBonus>
+      <!-- one second = 1, plus Time -->
+      <_bPoppingUpOn type="Boolean">1</_bPoppingUpOn>
+      <!-- use 1 = true or 0 = false (fall down the ingredients or not) -->
+      <_aRectangle type="Array">250,200,550,400</_aRectangle>
+      <!-- (X0,Y0,X1,Y1) for falling objects down (XO < X1 and YO < Y1) -->
+      <_nPointTouchWithLine type="Number">-2</_nPointTouchWithLine>
+      <!-- minus point, when ingredient touch with line -->
+      <_nAnimationLineSpeed type="Number">7</_nAnimationLineSpeed>
+      <!-- one second = 1000 -->
+      <_bShowAnimation type="Boolean">1</_bShowAnimation>
+      <!-- use 1 = true or 0 = false (for Car in "level-window") -->
+      <_sNameAnimation>animation1</_sNameAnimation>
+      <_bSoundAnimation type="Boolean">0</_bSoundAnimation>
+      <!-- use 1 = true ("off" default sound in game) or 0 = false ("on" default sound in game) -->
+      <_nTimeCreateSandwich type="Number">6</_nTimeCreateSandwich>
+      <!-- new sandwich fall down (one second = 1) -->
+      <_nMaxSandwiches type="Number">5</_nMaxSandwiches>
+      <!-- maximum sandwiches in left panel -->
+      <_nTimePrompt type="Number">20</_nTimePrompt>
+      <!-- Show Prompt, if a player does not catch the ingredients in the passage of time -->
+      <_nNumberEggTips type="Number">20</_nNumberEggTips>
+      <!-- number Tips for "eggtips" (If you circle this egg it will explode and tips shoot out from it in all directions.) -->
+      <!-- ======================================== -->
+      <!--<Sandwich>
+				<_sName>HAM</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>HAM+</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BIG HAMMY</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>CHEESE</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>GRILL-C</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			
+			<Sandwich>
+				<_sName>GRILL-C+T</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>-->
+      <Sandwich>
+        <_sName>SALAD</_sName>
+        <_nAppearance type="Number">2</_nAppearance>
+      </Sandwich>
+      <Sandwich>
+        <_sName>VEGIWICH</_sName>
+        <_nAppearance type="Number">2</_nAppearance>
+      </Sandwich>
+      <Sandwich>
+        <_sName>BLT</_sName>
+        <_nAppearance type="Number">20</_nAppearance>
+      </Sandwich>
+      <!--<Sandwich>
+				<_sName>BLT</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BACONATOR</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>-->
+      <!-- ========================================-->
+      <!--<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>salt</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>pepper</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>ketchup</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>mustard</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			-->
+      <!--<Condiment>
+				<_sName>mayonnaise</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>-->
+      <!-- ======================================== -->
+      <!--<Inedible>
+				<_sName>tack</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>
+			<Inedible>
+				<_sName>marble</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>
+			<Inedible>
+				<_sName>airfreshener</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>-->
+      <!-- ======================================== -->
+      <!--<Snack>
+				<_sName>cookie1</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>
+			<Snack>
+				<_sName>cookie2</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>
+			<Snack>
+				<_sName>egg</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>
+			-->
+      <!--<Snack>
+				<_sName>markermode</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>-->
+    </Level>
+    <Level>
+      <!-- concept: teaches about the extra time egg -->
+      <_nLevel type="Number">4</_nLevel>
+      <_sTextBeforeLevel>With a Little Help From My Friends</_sTextBeforeLevel>
+      <_sUrlInfoScreen>data/pictures/infoscreen05.swf</_sUrlInfoScreen>
+      <_aInfoScreenXY type="Array">0,0</_aInfoScreenXY>
+      <!-- coordinates X and Y -->
+      <_nPointsCompleteLevel type="Number">1100</_nPointsCompleteLevel>
+      <_nTimeCompleteLevel type="Number">110</_nTimeCompleteLevel>
+      <!-- one second = 1 -->
+      <_nBackgroundFrame type="Number">5</_nBackgroundFrame>
+      <!-- Background frame -->
+      <_nTipMinSpeed type="Number">2</_nTipMinSpeed>
+      <_nTipMaxSpeed type="Number">11</_nTipMaxSpeed>
+      <_nTipLifeTime type="Number">8</_nTipLifeTime>
+      <!-- one second = 1 -->
+      <_nMaxNumberIngredientsOnScreen type="Number">9</_nMaxNumberIngredientsOnScreen>
+      <_aConponentFirstDelayTime type="Array">0,5</_aConponentFirstDelayTime>
+      <!-- one second = 1 -->
+      <_aCondimentRepeatThrough type="Array">0,20</_aCondimentRepeatThrough>
+      <!-- one second = 1 -->
+      <_aInedibleRepeatThrough type="Array">15,60</_aInedibleRepeatThrough>
+      <!-- one second = 1 -->
+      <_aSnackRepeatThrough type="Array">30,40</_aSnackRepeatThrough>
+      <!-- one second = 1 -->
+      <_bBallShow type="Boolean">0</_bBallShow>
+      <!-- 1 = true, 0 = false -->
+      <_aBallRepeatThrough type="Array">15,60</_aBallRepeatThrough>
+      <!-- one second = 1 -->
+      <_nTimeBonusPointsPerSecond type="Number">10</_nTimeBonusPointsPerSecond>
+      <!-- bonus per second -->
+      <_nEggBonus type="Number">15</_nEggBonus>
+      <!-- one second = 1, plus Time -->
+      <_bPoppingUpOn type="Boolean">1</_bPoppingUpOn>
+      <!-- use 1 = true or 0 = false (fall down the ingredients or not) -->
+      <_aRectangle type="Array">250,200,550,400</_aRectangle>
+      <!-- (X0,Y0,X1,Y1) for falling objects down (XO < X1 and YO < Y1) -->
+      <_nPointTouchWithLine type="Number">-4</_nPointTouchWithLine>
+      <!-- minus point, when ingredient touch with line -->
+      <_nAnimationLineSpeed type="Number">7</_nAnimationLineSpeed>
+      <!-- one second = 1000 -->
+      <_bShowAnimation type="Boolean">0</_bShowAnimation>
+      <!-- use 1 = true or 0 = false (for Car in "level-window") -->
+      <_sNameAnimation>animation1</_sNameAnimation>
+      <_bSoundAnimation type="Boolean">0</_bSoundAnimation>
+      <!-- use 1 = true ("off" default sound in game) or 0 = false ("on" default sound in game) -->
+      <_nTimeCreateSandwich type="Number">5</_nTimeCreateSandwich>
+      <!-- new sandwich fall down (one second = 1) -->
+      <_nMaxSandwiches type="Number">4</_nMaxSandwiches>
+      <!-- maximum sandwiches in left panel -->
+      <_nTimePrompt type="Number">20</_nTimePrompt>
+      <!-- Show Prompt, if a player does not catch the ingredients in the passage of time -->
+      <_nNumberEggTips type="Number">20</_nNumberEggTips>
+      <!-- number Tips for "eggtips" (If you circle this egg it will explode and tips shoot out from it in all directions.) -->
+      <!-- ======================================== -->
+      <!--<Sandwich>
+				<_sName>HAM</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>HAM+</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BIG HAMMY</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>CHEESE</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>GRILL-C</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>-->
+      <Sandwich>
+        <_sName>GRILL-C+T</_sName>
+        <_nAppearance type="Number">5</_nAppearance>
+      </Sandwich>
+      <!--<Sandwich>
+				<_sName>CHEESY</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>-->
+      <Sandwich>
+        <_sName>SALAD</_sName>
+        <_nAppearance type="Number">5</_nAppearance>
+      </Sandwich>
+      <!--<Sandwich>
+				<_sName>VEGIWICH</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>-->
+      <Sandwich>
+        <_sName>BLT</_sName>
+        <_nAppearance type="Number">8</_nAppearance>
+      </Sandwich>
+      <!--<Sandwich>
+				<_sName>BLT</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BACONATOR</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>-->
+      <!-- ========================================-->
+      <!--<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>salt</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>pepper</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>ketchup</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>mustard</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>-->
+      <!--<Condiment>
+				<_sName>mayonnaise</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>-->
+      <!-- ======================================== -->
+      <!--<Inedible>
+				<_sName>tack</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>
+			<Inedible>
+				<_sName>marble</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>
+			<Inedible>
+				<_sName>airfreshener</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>-->
+      <!-- ======================================== -->
+      <!--<Snack>
+				<_sName>cookie1</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>
+			<Snack>
+				<_sName>cookie2</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>-->
+      <Snack>
+        <_sName>egg</_sName>
+        <_nAppearance type="Number">1</_nAppearance>
+      </Snack>
+      <!--<Snack>
+				<_sName>markermode</_sName>
+				<_nAppearance type="Number">97</_nAppearance>
+			</Snack>-->
+    </Level>
+    <Level>
+      <!-- concept: adds speedy ingredient ham -->
+      <_nLevel type="Number">5</_nLevel>
+      <_sTextBeforeLevel>A Porky Proposition</_sTextBeforeLevel>
+      <_sUrlInfoScreen>data/pictures/infoscreen06.swf</_sUrlInfoScreen>
+      <_aInfoScreenXY type="Array">0,0</_aInfoScreenXY>
+      <!-- coordinates X and Y -->
+      <_nPointsCompleteLevel type="Number">1700</_nPointsCompleteLevel>
+      <_nTimeCompleteLevel type="Number">130</_nTimeCompleteLevel>
+      <!-- one second = 1 -->
+      <_nBackgroundFrame type="Number">6</_nBackgroundFrame>
+      <!-- Background frame -->
+      <_nTipMinSpeed type="Number">2</_nTipMinSpeed>
+      <_nTipMaxSpeed type="Number">12</_nTipMaxSpeed>
+      <_nTipLifeTime type="Number">8</_nTipLifeTime>
+      <!-- one second = 1 -->
+      <_nMaxNumberIngredientsOnScreen type="Number">8</_nMaxNumberIngredientsOnScreen>
+      <_aConponentFirstDelayTime type="Array">0,5</_aConponentFirstDelayTime>
+      <!-- one second = 1 -->
+      <_aCondimentRepeatThrough type="Array">0,15</_aCondimentRepeatThrough>
+      <!-- one second = 1 -->
+      <_aInedibleRepeatThrough type="Array">15,60</_aInedibleRepeatThrough>
+      <!-- one second = 1 -->
+      <_aSnackRepeatThrough type="Array">15,60</_aSnackRepeatThrough>
+      <!-- one second = 1 -->
+      <_bBallShow type="Boolean">0</_bBallShow>
+      <!-- 1 = true, 0 = false -->
+      <_aBallRepeatThrough type="Array">15,60</_aBallRepeatThrough>
+      <!-- one second = 1 -->
+      <_nTimeBonusPointsPerSecond type="Number">11</_nTimeBonusPointsPerSecond>
+      <!-- bonus per second -->
+      <_nEggBonus type="Number">15</_nEggBonus>
+      <!-- one second = 1, plus Time -->
+      <_bPoppingUpOn type="Boolean">1</_bPoppingUpOn>
+      <!-- use 1 = true or 0 = false (fall down the ingredients or not) -->
+      <_aRectangle type="Array">250,200,550,400</_aRectangle>
+      <!-- (X0,Y0,X1,Y1) for falling objects down (XO < X1 and YO < Y1) -->
+      <_nPointTouchWithLine type="Number">-4</_nPointTouchWithLine>
+      <!-- minus point, when ingredient touch with line -->
+      <_nAnimationLineSpeed type="Number">7</_nAnimationLineSpeed>
+      <!-- one second = 1000 -->
+      <_bShowAnimation type="Boolean">0</_bShowAnimation>
+      <!-- use 1 = true or 0 = false (for Car in "level-window") -->
+      <_sNameAnimation>animation1</_sNameAnimation>
+      <_bSoundAnimation type="Boolean">0</_bSoundAnimation>
+      <!-- use 1 = true ("off" default sound in game) or 0 = false ("on" default sound in game) -->
+      <_nTimeCreateSandwich type="Number">5</_nTimeCreateSandwich>
+      <!-- new sandwich fall down (one second = 1) -->
+      <_nMaxSandwiches type="Number">4</_nMaxSandwiches>
+      <!-- maximum sandwiches in left panel -->
+      <_nTimePrompt type="Number">20</_nTimePrompt>
+      <!-- Show Prompt, if a player does not catch the ingredients in the passage of time -->
+      <_nNumberEggTips type="Number">20</_nNumberEggTips>
+      <!-- number Tips for "eggtips" (If you circle this egg it will explode and tips shoot out from it in all directions.) -->
+      <!-- ======================================== -->
+      <Sandwich>
+        <_sName>HAM</_sName>
+        <_nAppearance type="Number">10</_nAppearance>
+      </Sandwich>
+      <Sandwich>
+        <_sName>HAM+</_sName>
+        <_nAppearance type="Number">10</_nAppearance>
+      </Sandwich>
+      <Sandwich>
+        <_sName>GRILL-C</_sName>
+        <_nAppearance type="Number">10</_nAppearance>
+      </Sandwich>
+      <!--
+			<Sandwich>
+				<_sName>CHEESE</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>GRILL-C+T</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>SALAD</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>VEGIWICH</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BLT</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BLT</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BACONATOR</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>-->
+      <!-- ========================================-->
+      <!--<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>salt</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>pepper</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>ketchup</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			-->
+      <!--<Condiment>
+				<_sName>mustard</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>mayonnaise</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>-->
+      <!-- ======================================== -->
+      <!--<Inedible>
+				<_sName>tack</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>
+			<Inedible>
+				<_sName>marble</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>
+			<Inedible>
+				<_sName>airfreshener</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>-->
+      <!-- ======================================== -->
+      <!--<Snack>
+				<_sName>cookie1</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>
+			<Snack>
+				<_sName>cookie2</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>-->
+      <Snack>
+        <_sName>egg</_sName>
+        <_nAppearance type="Number">25</_nAppearance>
+      </Snack>
+      <!--<Snack>
+				<_sName>markermode</_sName>
+				<_nAppearance type="Number">50</_nAppearance>
+			</Snack>-->
+    </Level>
+	
+	<Level>
+      <!-- concept: teaches player about the pen. -->
+      <_nLevel type="Number">6</_nLevel>
+      <_sTextBeforeLevel>Pen Pal</_sTextBeforeLevel>
+      <_sUrlInfoScreen>data/pictures/infoscreen07.swf</_sUrlInfoScreen>
+      <_aInfoScreenXY type="Array">0,0</_aInfoScreenXY>
+      <!-- coordinates X and Y -->
+      <_nPointsCompleteLevel type="Number">1200</_nPointsCompleteLevel>
+      <_nTimeCompleteLevel type="Number">130</_nTimeCompleteLevel>
+      <!-- one second = 1 -->
+      <_nBackgroundFrame type="Number">7</_nBackgroundFrame>
+      <!-- Background frame -->
+      <_nTipMinSpeed type="Number">2</_nTipMinSpeed>
+      <_nTipMaxSpeed type="Number">12</_nTipMaxSpeed>
+      <_nTipLifeTime type="Number">8</_nTipLifeTime>
+      <!-- one second = 1 -->
+      <_nMaxNumberIngredientsOnScreen type="Number">10</_nMaxNumberIngredientsOnScreen>
+      <_aConponentFirstDelayTime type="Array">0,5</_aConponentFirstDelayTime>
+      <!-- one second = 1 -->
+      <_aCondimentRepeatThrough type="Array">0,10</_aCondimentRepeatThrough>
+      <!-- one second = 1 -->
+      <_aInedibleRepeatThrough type="Array">15,60</_aInedibleRepeatThrough>
+      <!-- one second = 1 -->
+      <_aSnackRepeatThrough type="Array">15,40</_aSnackRepeatThrough>
+      <!-- one second = 1 -->
+      <_bBallShow type="Boolean">0</_bBallShow>
+      <!-- 1 = true, 0 = false -->
+      <_aBallRepeatThrough type="Array">15,60</_aBallRepeatThrough>
+      <!-- one second = 1 -->
+      <_nTimeBonusPointsPerSecond type="Number">10</_nTimeBonusPointsPerSecond>
+      <!-- bonus per second -->
+      <_nEggBonus type="Number">15</_nEggBonus>
+      <!-- one second = 1, plus Time -->
+      <_bPoppingUpOn type="Boolean">1</_bPoppingUpOn>
+      <!-- use 1 = true or 0 = false (fall down the ingredients or not) -->
+      <_aRectangle type="Array">250,200,550,400</_aRectangle>
+      <!-- (X0,Y0,X1,Y1) for falling objects down (XO < X1 and YO < Y1) -->
+      <_nPointTouchWithLine type="Number">-2</_nPointTouchWithLine>
+      <!-- minus point, when ingredient touch with line -->
+      <_nAnimationLineSpeed type="Number">7</_nAnimationLineSpeed>
+      <!-- one second = 1000 -->
+      <_bShowAnimation type="Boolean">0</_bShowAnimation>
+      <!-- use 1 = true or 0 = false (for Car in "level-window") -->
+      <_sNameAnimation>animation1</_sNameAnimation>
+      <_bSoundAnimation type="Boolean">0</_bSoundAnimation>
+      <!-- use 1 = true ("off" default sound in game) or 0 = false ("on" default sound in game) -->
+      <_nTimeCreateSandwich type="Number">4.5</_nTimeCreateSandwich>
+      <!-- new sandwich fall down (one second = 1) -->
+      <_nMaxSandwiches type="Number">4</_nMaxSandwiches>
+      <!-- maximum sandwiches in left panel -->
+      <_nTimePrompt type="Number">20</_nTimePrompt>
+      <!-- Show Prompt, if a player does not catch the ingredients in the passage of time -->
+      <_nNumberEggTips type="Number">20</_nNumberEggTips>
+      <!-- number Tips for "eggtips" (If you circle this egg it will explode and tips shoot out from it in all directions.) -->
+      <!-- ======================================== -->
+      <Sandwich>
+        <_sName>BUTTER</_sName>
+        <_nAppearance type="Number">15</_nAppearance>
+      </Sandwich>
+      <Sandwich>
+        <_sName>HAM</_sName>
+        <_nAppearance type="Number">20</_nAppearance>
+      </Sandwich>
+	  <Sandwich>
+			<_sName>VEGIWICH</_sName>
+			<_nAppearance type="Number">20</_nAppearance>
+	  </Sandwich>
+      <!--<Sandwich>
+				<_sName>GRILL-C</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			
+			<Sandwich>
+				<_sName>CHEESE</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>GRILL-C+T</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>SALAD</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>VEGIWICH</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BLT</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BLT</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BACONATOR</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>-->
+      <!-- ========================================-->
+      <!--<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>salt</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>pepper</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>ketchup</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			-->
+      <!--<Condiment>
+				<_sName>mustard</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>mayonnaise</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>-->
+      <!-- ======================================== -->
+      <!--<Inedible>
+				<_sName>tack</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>
+			<Inedible>
+				<_sName>marble</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>
+			<Inedible>
+				<_sName>airfreshener</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>-->
+      <!-- ======================================== -->
+      <!--<Snack>
+				<_sName>cookie1</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>
+			<Snack>
+				<_sName>cookie2</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>
+			<Snack>
+				<_sName>egg</_sName>
+				<_nAppearance type="Number">25</_nAppearance>
+			</Snack>-->
+      <Snack>
+        <_sName>markermode</_sName>
+        <_nAppearance type="Number">50</_nAppearance>
+      </Snack>
+    </Level>
+	    <Level>
+      <!-- concept: teaches player about the pen. -->
+      <_nLevel type="Number">6.5</_nLevel>
+      <_sTextBeforeLevel>The Pen Is Mightier</_sTextBeforeLevel>
+      <_sUrlInfoScreen>data/pictures/infoscreen07b.swf</_sUrlInfoScreen>
+      <_aInfoScreenXY type="Array">0,0</_aInfoScreenXY>
+      <!-- coordinates X and Y -->
+      <_nPointsCompleteLevel type="Number">1500</_nPointsCompleteLevel>
+      <_nTimeCompleteLevel type="Number">130</_nTimeCompleteLevel>
+      <!-- one second = 1 -->
+      <_nBackgroundFrame type="Number">8</_nBackgroundFrame>
+      <!-- Background frame -->
+      <_nTipMinSpeed type="Number">2</_nTipMinSpeed>
+      <_nTipMaxSpeed type="Number">12</_nTipMaxSpeed>
+      <_nTipLifeTime type="Number">8</_nTipLifeTime>
+      <!-- one second = 1 -->
+      <_nMaxNumberIngredientsOnScreen type="Number">10</_nMaxNumberIngredientsOnScreen>
+      <_aConponentFirstDelayTime type="Array">0,5</_aConponentFirstDelayTime>
+      <!-- one second = 1 -->
+      <_aCondimentRepeatThrough type="Array">0,10</_aCondimentRepeatThrough>
+      <!-- one second = 1 -->
+      <_aInedibleRepeatThrough type="Array">15,60</_aInedibleRepeatThrough>
+      <!-- one second = 1 -->
+      <_aSnackRepeatThrough type="Array">15,40</_aSnackRepeatThrough>
+      <!-- one second = 1 -->
+      <_bBallShow type="Boolean">0</_bBallShow>
+      <!-- 1 = true, 0 = false -->
+      <_aBallRepeatThrough type="Array">15,60</_aBallRepeatThrough>
+      <!-- one second = 1 -->
+      <_nTimeBonusPointsPerSecond type="Number">10</_nTimeBonusPointsPerSecond>
+      <!-- bonus per second -->
+      <_nEggBonus type="Number">15</_nEggBonus>
+      <!-- one second = 1, plus Time -->
+      <_bPoppingUpOn type="Boolean">1</_bPoppingUpOn>
+      <!-- use 1 = true or 0 = false (fall down the ingredients or not) -->
+      <_aRectangle type="Array">250,200,550,400</_aRectangle>
+      <!-- (X0,Y0,X1,Y1) for falling objects down (XO < X1 and YO < Y1) -->
+      <_nPointTouchWithLine type="Number">-2</_nPointTouchWithLine>
+      <!-- minus point, when ingredient touch with line -->
+      <_nAnimationLineSpeed type="Number">7</_nAnimationLineSpeed>
+      <!-- one second = 1000 -->
+      <_bShowAnimation type="Boolean">0</_bShowAnimation>
+      <!-- use 1 = true or 0 = false (for Car in "level-window") -->
+      <_sNameAnimation>animation1</_sNameAnimation>
+      <_bSoundAnimation type="Boolean">0</_bSoundAnimation>
+      <!-- use 1 = true ("off" default sound in game) or 0 = false ("on" default sound in game) -->
+      <_nTimeCreateSandwich type="Number">4.5</_nTimeCreateSandwich>
+      <!-- new sandwich fall down (one second = 1) -->
+      <_nMaxSandwiches type="Number">4</_nMaxSandwiches>
+      <!-- maximum sandwiches in left panel -->
+      <_nTimePrompt type="Number">20</_nTimePrompt>
+      <!-- Show Prompt, if a player does not catch the ingredients in the passage of time -->
+      <_nNumberEggTips type="Number">20</_nNumberEggTips>
+      <!-- number Tips for "eggtips" (If you circle this egg it will explode and tips shoot out from it in all directions.) -->
+      <!-- ======================================== -->
+      <Sandwich>
+        <_sName>HAM</_sName>
+        <_nAppearance type="Number">10</_nAppearance>
+      </Sandwich>
+      <Sandwich>
+        <_sName>HAM+</_sName>
+        <_nAppearance type="Number">20</_nAppearance>
+      </Sandwich>
+      <!--<Sandwich>
+				<_sName>GRILL-C</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			
+			<Sandwich>
+				<_sName>CHEESE</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>GRILL-C+T</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>SALAD</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>VEGIWICH</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BLT</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BLT</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BACONATOR</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>-->
+      <!-- ========================================-->
+      <!--<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>salt</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>pepper</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>ketchup</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			-->
+      <!--<Condiment>
+				<_sName>mustard</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>mayonnaise</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>-->
+      <!-- ======================================== -->
+      <!--<Inedible>
+				<_sName>tack</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>
+			<Inedible>
+				<_sName>marble</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>
+			<Inedible>
+				<_sName>airfreshener</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>-->
+      <!-- ======================================== -->
+      <!--<Snack>
+				<_sName>cookie1</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>
+			<Snack>
+				<_sName>cookie2</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>
+			<Snack>
+				<_sName>egg</_sName>
+				<_nAppearance type="Number">25</_nAppearance>
+			</Snack>-->
+      <Snack>
+        <_sName>markermode</_sName>
+        <_nAppearance type="Number">50</_nAppearance>
+      </Snack>
+    </Level>
+    <Level>
+      <!-- concept: teaches player how inedibles.  Bonus round with lots of ham -->
+      <_nLevel type="Number">7</_nLevel>
+      <_sTextBeforeLevel>Tic Tack Trouble</_sTextBeforeLevel>
+      <_sUrlInfoScreen>data/pictures/infoscreen08.swf</_sUrlInfoScreen>
+      <_aInfoScreenXY type="Array">0,0</_aInfoScreenXY>
+      <!-- coordinates X and Y -->
+      <_nPointsCompleteLevel type="Number">1600</_nPointsCompleteLevel>
+      <_nTimeCompleteLevel type="Number">130</_nTimeCompleteLevel>
+      <!-- one second = 1 -->
+      <_nBackgroundFrame type="Number">9</_nBackgroundFrame>
+      <!-- Background frame -->
+      <_nTipMinSpeed type="Number">3</_nTipMinSpeed>
+      <_nTipMaxSpeed type="Number">12</_nTipMaxSpeed>
+      <_nTipLifeTime type="Number">8</_nTipLifeTime>
+      <!-- one second = 1 -->
+      <_nMaxNumberIngredientsOnScreen type="Number">12</_nMaxNumberIngredientsOnScreen>
+      <_aConponentFirstDelayTime type="Array">0,5</_aConponentFirstDelayTime>
+      <!-- one second = 1 -->
+      <_aCondimentRepeatThrough type="Array">0,10</_aCondimentRepeatThrough>
+      <!-- one second = 1 -->
+      <_aInedibleRepeatThrough type="Array">5,30</_aInedibleRepeatThrough>
+      <!-- one second = 1 -->
+      <_aSnackRepeatThrough type="Array">15,50</_aSnackRepeatThrough>
+      <!-- one second = 1 -->
+      <_bBallShow type="Boolean">0</_bBallShow>
+      <!-- 1 = true, 0 = false -->
+      <_aBallRepeatThrough type="Array">15,60</_aBallRepeatThrough>
+      <!-- one second = 1 -->
+      <_nTimeBonusPointsPerSecond type="Number">13</_nTimeBonusPointsPerSecond>
+      <!-- bonus per second -->
+      <_nEggBonus type="Number">10</_nEggBonus>
+      <!-- one second = 1, plus Time -->
+      <_bPoppingUpOn type="Boolean">1</_bPoppingUpOn>
+      <!-- use 1 = true or 0 = false (fall down the ingredients or not) -->
+      <_aRectangle type="Array">250,200,550,400</_aRectangle>
+      <!-- (X0,Y0,X1,Y1) for falling objects down (XO < X1 and YO < Y1) -->
+      <_nPointTouchWithLine type="Number">-3</_nPointTouchWithLine>
+      <!-- minus point, when ingredient touch with line -->
+      <_nAnimationLineSpeed type="Number">7</_nAnimationLineSpeed>
+      <!-- one second = 1000 -->
+      <_bShowAnimation type="Boolean">1</_bShowAnimation>
+      <!-- use 1 = true or 0 = false (for Car in "level-window") -->
+      <_sNameAnimation>animation1</_sNameAnimation>
+      <_bSoundAnimation type="Boolean">0</_bSoundAnimation>
+      <!-- use 1 = true ("off" default sound in game) or 0 = false ("on" default sound in game) -->
+      <_nTimeCreateSandwich type="Number">5</_nTimeCreateSandwich>
+      <!-- new sandwich fall down (one second = 1) -->
+      <_nMaxSandwiches type="Number">3</_nMaxSandwiches>
+      <!-- maximum sandwiches in left panel -->
+      <_nTimePrompt type="Number">30</_nTimePrompt>
+      <!-- Show Prompt, if a player does not catch the ingredients in the passage of time -->
+      <_nNumberEggTips type="Number">20</_nNumberEggTips>
+      <!-- number Tips for "eggtips" (If you circle this egg it will explode and tips shoot out from it in all directions.) -->
+      <!-- ======================================== -->
+      <Sandwich>
+			<_sName>HAM</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>GRILL-C</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BLT</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+		<!--<Sandwich>
+				<_sName>CHEESE</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>GRILL-C</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+		<Sandwich>
+				<_sName>GRILL-C+T</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>SALAD</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>VEGIWICH</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BLT</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BLT</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+      <Sandwich>
+        <_sName>HAM-X</_sName>
+        <_nAppearance type="Number">8</_nAppearance>
+      </Sandwich>-->
+      <!-- ========================================-->
+      <!--<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>salt</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>pepper</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>ketchup</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			-->
+      <!--<Condiment>
+				<_sName>mustard</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>mayonnaise</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>-->
+      <!-- ======================================== -->
+      <Inedible>
+        <_sName>tack</_sName>
+        <_nAppearance type="Number">100</_nAppearance>
+      </Inedible>
+      <!--<Inedible>
+				<_sName>marble</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>
+			<Inedible>
+				<_sName>airfreshener</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>-->
+      <!-- ======================================== -->
+      <!--<Snack>
+				<_sName>cookie1</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>
+			<Snack>
+				<_sName>cookie2</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>-->
+      <Snack>
+        <_sName>egg</_sName>
+        <_nAppearance type="Number">20</_nAppearance>
+      </Snack>
+      <Snack>
+        <_sName>markermode</_sName>
+        <_nAppearance type="Number">10</_nAppearance>
+      </Snack>
+    </Level>
+	<Level>
+      <!-- concept: teaches player how inedibles.  Bonus round with lots of ham -->
+      <_nLevel type="Number">7.5</_nLevel>
+      <_sTextBeforeLevel>Mistakes are Made</_sTextBeforeLevel>
+      <_sUrlInfoScreen>data/pictures/infoscreen08b.swf</_sUrlInfoScreen>
+      <_aInfoScreenXY type="Array">0,0</_aInfoScreenXY>
+      <!-- coordinates X and Y -->
+      <_nPointsCompleteLevel type="Number">1800</_nPointsCompleteLevel>
+      <_nTimeCompleteLevel type="Number">130</_nTimeCompleteLevel>
+      <!-- one second = 1 -->
+      <_nBackgroundFrame type="Number">1</_nBackgroundFrame>
+      <!-- Background frame -->
+      <_nTipMinSpeed type="Number">3</_nTipMinSpeed>
+      <_nTipMaxSpeed type="Number">12</_nTipMaxSpeed>
+      <_nTipLifeTime type="Number">8</_nTipLifeTime>
+      <!-- one second = 1 -->
+      <_nMaxNumberIngredientsOnScreen type="Number">12</_nMaxNumberIngredientsOnScreen>
+      <_aConponentFirstDelayTime type="Array">0,5</_aConponentFirstDelayTime>
+      <!-- one second = 1 -->
+      <_aCondimentRepeatThrough type="Array">0,10</_aCondimentRepeatThrough>
+      <!-- one second = 1 -->
+      <_aInedibleRepeatThrough type="Array">5,20</_aInedibleRepeatThrough>
+      <!-- one second = 1 -->
+      <_aSnackRepeatThrough type="Array">15,45</_aSnackRepeatThrough>
+      <!-- one second = 1 -->
+      <_bBallShow type="Boolean">0</_bBallShow>
+      <!-- 1 = true, 0 = false -->
+      <_aBallRepeatThrough type="Array">15,60</_aBallRepeatThrough>
+      <!-- one second = 1 -->
+      <_nTimeBonusPointsPerSecond type="Number">13</_nTimeBonusPointsPerSecond>
+      <!-- bonus per second -->
+      <_nEggBonus type="Number">10</_nEggBonus>
+      <!-- one second = 1, plus Time -->
+      <_bPoppingUpOn type="Boolean">1</_bPoppingUpOn>
+      <!-- use 1 = true or 0 = false (fall down the ingredients or not) -->
+      <_aRectangle type="Array">250,200,550,400</_aRectangle>
+      <!-- (X0,Y0,X1,Y1) for falling objects down (XO < X1 and YO < Y1) -->
+      <_nPointTouchWithLine type="Number">-5</_nPointTouchWithLine>
+      <!-- minus point, when ingredient touch with line -->
+      <_nAnimationLineSpeed type="Number">7</_nAnimationLineSpeed>
+      <!-- one second = 1000 -->
+      <_bShowAnimation type="Boolean">0</_bShowAnimation>
+      <!-- use 1 = true or 0 = false (for Car in "level-window") -->
+      <_sNameAnimation>animation1</_sNameAnimation>
+      <_bSoundAnimation type="Boolean">0</_bSoundAnimation>
+      <!-- use 1 = true ("off" default sound in game) or 0 = false ("on" default sound in game) -->
+      <_nTimeCreateSandwich type="Number">100</_nTimeCreateSandwich>
+      <!-- new sandwich fall down (one second = 1) -->
+      <_nMaxSandwiches type="Number">3</_nMaxSandwiches>
+      <!-- maximum sandwiches in left panel -->
+      <_nTimePrompt type="Number">30</_nTimePrompt>
+      <!-- Show Prompt, if a player does not catch the ingredients in the passage of time -->
+      <_nNumberEggTips type="Number">20</_nNumberEggTips>
+      <!-- number Tips for "eggtips" (If you circle this egg it will explode and tips shoot out from it in all directions.) -->
+      <!-- ======================================== -->
+      <!--<Sandwich>
+				<_sName>HAM</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>HAM+</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BIG HAMMY</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>CHEESE</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>GRILL-C</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>GRILL-C+T</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>SALAD</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>VEGIWICH</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BLT</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BLT</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>-->
+      <Sandwich>
+        <_sName>HAM-X</_sName>
+        <_nAppearance type="Number">8</_nAppearance>
+      </Sandwich>
+      <!-- ========================================-->
+      <!--<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>salt</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>pepper</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>ketchup</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			-->
+      <!--<Condiment>
+				<_sName>mustard</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>mayonnaise</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>-->
+      <!-- ======================================== -->
+      <Inedible>
+        <_sName>tack</_sName>
+        <_nAppearance type="Number">100</_nAppearance>
+      </Inedible>
+      <!--<Inedible>
+				<_sName>marble</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>
+			<Inedible>
+				<_sName>airfreshener</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>-->
+      <!-- ======================================== -->
+      <!--<Snack>
+				<_sName>cookie1</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>
+			<Snack>
+				<_sName>cookie2</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>-->
+      <Snack>
+        <_sName>egg</_sName>
+        <_nAppearance type="Number">20</_nAppearance>
+      </Snack>
+      <Snack>
+        <_sName>markermode</_sName>
+        <_nAppearance type="Number">20</_nAppearance>
+      </Snack>
+    </Level>
+    <Level>
+      <!-- concept: Introduces seseme seed buns.  tougher -->
+      <_nLevel type="Number">8</_nLevel>
+      <_sTextBeforeLevel>A New Hope</_sTextBeforeLevel>
+      <_sUrlInfoScreen>data/pictures/infoscreen09.swf</_sUrlInfoScreen>
+      <_aInfoScreenXY type="Array">0,0</_aInfoScreenXY>
+      <!-- coordinates X and Y -->
+      <_nPointsCompleteLevel type="Number">2100</_nPointsCompleteLevel>
+      <_nTimeCompleteLevel type="Number">130</_nTimeCompleteLevel>
+      <!-- one second = 1 -->
+      <_nBackgroundFrame type="Number">2</_nBackgroundFrame>
+      <!-- Background frame -->
+      <_nTipMinSpeed type="Number">3</_nTipMinSpeed>
+      <_nTipMaxSpeed type="Number">12</_nTipMaxSpeed>
+      <_nTipLifeTime type="Number">8</_nTipLifeTime>
+      <!-- one second = 1 -->
+      <_nMaxNumberIngredientsOnScreen type="Number">12</_nMaxNumberIngredientsOnScreen>
+      <_aConponentFirstDelayTime type="Array">0,5</_aConponentFirstDelayTime>
+      <!-- one second = 1 -->
+      <_aCondimentRepeatThrough type="Array">0,15</_aCondimentRepeatThrough>
+      <!-- one second = 1 -->
+      <_aInedibleRepeatThrough type="Array">15,60</_aInedibleRepeatThrough>
+      <!-- one second = 1 -->
+      <_aSnackRepeatThrough type="Array">15,60</_aSnackRepeatThrough>
+      <!-- one second = 1 -->
+      <_bBallShow type="Boolean">0</_bBallShow>
+      <!-- 1 = true, 0 = false -->
+      <_aBallRepeatThrough type="Array">15,60</_aBallRepeatThrough>
+      <!-- one second = 1 -->
+      <_nTimeBonusPointsPerSecond type="Number">20</_nTimeBonusPointsPerSecond>
+      <!-- bonus per second -->
+      <_nEggBonus type="Number">10</_nEggBonus>
+      <!-- one second = 1, plus Time -->
+      <_bPoppingUpOn type="Boolean">0</_bPoppingUpOn>
+      <!-- use 1 = true or 0 = false (fall down the ingredients or not) -->
+      <_aRectangle type="Array">250,200,550,400</_aRectangle>
+      <!-- (X0,Y0,X1,Y1) for falling objects down (XO < X1 and YO < Y1) -->
+      <_nPointTouchWithLine type="Number">-6</_nPointTouchWithLine>
+      <!-- minus point, when ingredient touch with line -->
+      <_nAnimationLineSpeed type="Number">7</_nAnimationLineSpeed>
+      <!-- one second = 1000 -->
+      <_bShowAnimation type="Boolean">0</_bShowAnimation>
+      <!-- use 1 = true or 0 = false (for Car in "level-window") -->
+      <_sNameAnimation>animation1</_sNameAnimation>
+      <_bSoundAnimation type="Boolean">0</_bSoundAnimation>
+      <!-- use 1 = true ("off" default sound in game) or 0 = false ("on" default sound in game) -->
+      <_nTimeCreateSandwich type="Number">4.2</_nTimeCreateSandwich>
+      <!-- new sandwich fall down (one second = 1) -->
+      <_nMaxSandwiches type="Number">4</_nMaxSandwiches>
+      <!-- maximum sandwiches in left panel -->
+      <_nTimePrompt type="Number">30</_nTimePrompt>
+      <!-- Show Prompt, if a player does not catch the ingredients in the passage of time -->
+      <_nNumberEggTips type="Number">20</_nNumberEggTips>
+      <!-- number Tips for "eggtips" (If you circle this egg it will explode and tips shoot out from it in all directions.) -->
+      <!-- ======================================== -->
+      <!--
+			<Sandwich>
+				<_sName>HAM</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>HAM+</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BIG HAMMY</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>CHEESE</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>GRILL-C</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>GRILL-C+T</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>SALAD</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>-->
+      <Sandwich>
+        <_sName>BACON</_sName>
+        <_nAppearance type="Number">8</_nAppearance>
+      </Sandwich>
+      <!--<Sandwich>
+				<_sName>BACON+</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BACONATOR</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>HAM-X</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>-->
+      <!-- ========================================-->
+      <!--<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>salt</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>pepper</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>ketchup</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			-->
+      <!--<Condiment>
+				<_sName>mustard</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>mayonnaise</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>-->
+      <!-- ======================================== -->
+      <Inedible>
+        <_sName>tack</_sName>
+        <_nAppearance type="Number">100</_nAppearance>
+      </Inedible>
+      <!--<Inedible>
+				<_sName>marble</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>
+			<Inedible>
+				<_sName>airfreshener</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>-->
+      <!-- ======================================== -->
+      <!--<Snack>
+				<_sName>cookie1</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>
+			<Snack>
+				<_sName>cookie2</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>-->
+      <Snack>
+        <_sName>egg</_sName>
+        <_nAppearance type="Number">1</_nAppearance>
+      </Snack>
+      <Snack>
+        <_sName>markermode</_sName>
+        <_nAppearance type="Number">1</_nAppearance>
+      </Snack>
+    </Level>
+    <Level>
+      <!-- concept: teaches player about condoments.  -->
+      <_nLevel type="Number">9</_nLevel>
+      <_sTextBeforeLevel>Behold the Burger!</_sTextBeforeLevel>
+      <_sUrlInfoScreen>data/pictures/infoscreen10.swf</_sUrlInfoScreen>
+      <_aInfoScreenXY type="Array">0,0</_aInfoScreenXY>
+      <!-- coordinates X and Y -->
+      <_nPointsCompleteLevel type="Number">2800</_nPointsCompleteLevel>
+      <_nTimeCompleteLevel type="Number">180</_nTimeCompleteLevel>
+      <!-- one second = 1 -->
+      <_nBackgroundFrame type="Number">3</_nBackgroundFrame>
+      <!-- Background frame -->
+      <_nTipMinSpeed type="Number">3</_nTipMinSpeed>
+      <_nTipMaxSpeed type="Number">12</_nTipMaxSpeed>
+      <_nTipLifeTime type="Number">8</_nTipLifeTime>
+      <!-- one second = 1 -->
+      <_nMaxNumberIngredientsOnScreen type="Number">9</_nMaxNumberIngredientsOnScreen>
+      <_aConponentFirstDelayTime type="Array">0,5</_aConponentFirstDelayTime>
+      <!-- one second = 1 -->
+      <_aCondimentRepeatThrough type="Array">0,15</_aCondimentRepeatThrough>
+      <!-- one second = 1 -->
+      <_aInedibleRepeatThrough type="Array">15,60</_aInedibleRepeatThrough>
+      <!-- one second = 1 -->
+      <_aSnackRepeatThrough type="Array">15,60</_aSnackRepeatThrough>
+      <!-- one second = 1 -->
+      <_bBallShow type="Boolean">0</_bBallShow>
+      <!-- 1 = true, 0 = false -->
+      <_aBallRepeatThrough type="Array">15,60</_aBallRepeatThrough>
+      <!-- one second = 1 -->
+      <_nTimeBonusPointsPerSecond type="Number">20</_nTimeBonusPointsPerSecond>
+      <!-- bonus per second -->
+      <_nEggBonus type="Number">10</_nEggBonus>
+      <!-- one second = 1, plus Time -->
+      <_bPoppingUpOn type="Boolean">1</_bPoppingUpOn>
+      <!-- use 1 = true or 0 = false (fall down the ingredients or not) -->
+      <_aRectangle type="Array">250,200,550,400</_aRectangle>
+      <!-- (X0,Y0,X1,Y1) for falling objects down (XO < X1 and YO < Y1) -->
+      <_nPointTouchWithLine type="Number">-10</_nPointTouchWithLine>
+      <!-- minus point, when ingredient touch with line -->
+      <_nAnimationLineSpeed type="Number">7</_nAnimationLineSpeed>
+      <!-- one second = 1000 -->
+      <_bShowAnimation type="Boolean">1</_bShowAnimation>
+      <!-- use 1 = true or 0 = false (for Car in "level-window") -->
+      <_sNameAnimation>animation1</_sNameAnimation>
+      <_bSoundAnimation type="Boolean">0</_bSoundAnimation>
+      <!-- use 1 = true ("off" default sound in game) or 0 = false ("on" default sound in game) -->
+      <_nTimeCreateSandwich type="Number">7</_nTimeCreateSandwich>
+      <!-- new sandwich fall down (one second = 1) -->
+      <_nMaxSandwiches type="Number">5</_nMaxSandwiches>
+      <!-- maximum sandwiches in left panel -->
+      <_nTimePrompt type="Number">30</_nTimePrompt>
+      <!-- Show Prompt, if a player does not catch the ingredients in the passage of time -->
+      <_nNumberEggTips type="Number">20</_nNumberEggTips>
+      <!-- number Tips for "eggtips" (If you circle this egg it will explode and tips shoot out from it in all directions.) -->
+      <!-- ======================================== -->
+      <!--
+			<Sandwich>
+				<_sName>HAM</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>HAM+</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BIG HAMMY</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>CHEESE</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>GRILL-C</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>GRILL-C+T</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>SALAD</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>-->
+      <Sandwich>
+        <_sName>BURG</_sName>
+        <_nAppearance type="Number">8</_nAppearance>
+      </Sandwich>
+      <Sandwich>
+        <_sName>C-BURG</_sName>
+        <_nAppearance type="Number">8</_nAppearance>
+      </Sandwich>
+      <Sandwich>
+        <_sName>BACON-BURG</_sName>
+        <_nAppearance type="Number">8</_nAppearance>
+      </Sandwich>
+      <!--
+			<Sandwich>
+				<_sName>BACONATOR</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>-->
+      <!-- ========================================-->
+      <!--<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>salt</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>pepper</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>ketchup</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>-->
+      <!--<Condiment>
+				<_sName>mustard</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>mayonnaise</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>-->
+      <!-- ======================================== -->
+      <Inedible>
+        <_sName>tack</_sName>
+        <_nAppearance type="Number">100</_nAppearance>
+      </Inedible>
+      <!--<Inedible>
+				<_sName>marble</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>
+			<Inedible>
+				<_sName>airfreshener</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>-->
+      <!-- ======================================== -->
+      <!--<Snack>
+				<_sName>cookie1</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>
+			<Snack>
+				<_sName>cookie2</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>-->
+      <Snack>
+        <_sName>egg</_sName>
+        <_nAppearance type="Number">1</_nAppearance>
+      </Snack>
+      <Snack>
+        <_sName>markermode</_sName>
+        <_nAppearance type="Number">1</_nAppearance>
+      </Snack>
+    </Level>
+	<Level>
+      <!-- concept: teaches player about condoments.  -->
+      <_nLevel type="Number">9.5</_nLevel>
+      <_sTextBeforeLevel>Better Burger?</_sTextBeforeLevel>
+      <_sUrlInfoScreen>data/pictures/infoscreen10b.swf</_sUrlInfoScreen>
+      <_aInfoScreenXY type="Array">0,0</_aInfoScreenXY>
+      <!-- coordinates X and Y -->
+      <_nPointsCompleteLevel type="Number">2700</_nPointsCompleteLevel>
+      <_nTimeCompleteLevel type="Number">190</_nTimeCompleteLevel>
+      <!-- one second = 1 -->
+      <_nBackgroundFrame type="Number">4</_nBackgroundFrame>
+      <!-- Background frame -->
+      <_nTipMinSpeed type="Number">3</_nTipMinSpeed>
+      <_nTipMaxSpeed type="Number">12</_nTipMaxSpeed>
+      <_nTipLifeTime type="Number">8</_nTipLifeTime>
+      <!-- one second = 1 -->
+      <_nMaxNumberIngredientsOnScreen type="Number">9</_nMaxNumberIngredientsOnScreen>
+      <_aConponentFirstDelayTime type="Array">0,5</_aConponentFirstDelayTime>
+      <!-- one second = 1 -->
+      <_aCondimentRepeatThrough type="Array">0,15</_aCondimentRepeatThrough>
+      <!-- one second = 1 -->
+      <_aInedibleRepeatThrough type="Array">15,60</_aInedibleRepeatThrough>
+      <!-- one second = 1 -->
+      <_aSnackRepeatThrough type="Array">15,50</_aSnackRepeatThrough>
+      <!-- one second = 1 -->
+      <_bBallShow type="Boolean">0</_bBallShow>
+      <!-- 1 = true, 0 = false -->
+      <_aBallRepeatThrough type="Array">15,60</_aBallRepeatThrough>
+      <!-- one second = 1 -->
+      <_nTimeBonusPointsPerSecond type="Number">25</_nTimeBonusPointsPerSecond>
+      <!-- bonus per second -->
+      <_nEggBonus type="Number">10</_nEggBonus>
+      <!-- one second = 1, plus Time -->
+      <_bPoppingUpOn type="Boolean">1</_bPoppingUpOn>
+      <!-- use 1 = true or 0 = false (fall down the ingredients or not) -->
+      <_aRectangle type="Array">250,200,550,400</_aRectangle>
+      <!-- (X0,Y0,X1,Y1) for falling objects down (XO < X1 and YO < Y1) -->
+      <_nPointTouchWithLine type="Number">-10</_nPointTouchWithLine>
+      <!-- minus point, when ingredient touch with line -->
+      <_nAnimationLineSpeed type="Number">7</_nAnimationLineSpeed>
+      <!-- one second = 1000 -->
+      <_bShowAnimation type="Boolean">0</_bShowAnimation>
+      <!-- use 1 = true or 0 = false (for Car in "level-window") -->
+      <_sNameAnimation>animation1</_sNameAnimation>
+      <_bSoundAnimation type="Boolean">0</_bSoundAnimation>
+      <!-- use 1 = true ("off" default sound in game) or 0 = false ("on" default sound in game) -->
+      <_nTimeCreateSandwich type="Number">7</_nTimeCreateSandwich>
+      <!-- new sandwich fall down (one second = 1) -->
+      <_nMaxSandwiches type="Number">5</_nMaxSandwiches>
+      <!-- maximum sandwiches in left panel -->
+      <_nTimePrompt type="Number">30</_nTimePrompt>
+      <!-- Show Prompt, if a player does not catch the ingredients in the passage of time -->
+      <_nNumberEggTips type="Number">20</_nNumberEggTips>
+      <!-- number Tips for "eggtips" (If you circle this egg it will explode and tips shoot out from it in all directions.) -->
+      <!-- ======================================== -->
+      <!--
+			<Sandwich>
+				<_sName>HAM</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>HAM+</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BIG HAMMY</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>CHEESE</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>GRILL-C</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>GRILL-C+T</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>SALAD</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>-->
+      <Sandwich>
+        <_sName>V-BURG</_sName>
+        <_nAppearance type="Number">8</_nAppearance>
+      </Sandwich>
+      <Sandwich>
+        <_sName>TOP SECRET</_sName>
+        <_nAppearance type="Number">8</_nAppearance>
+      </Sandwich>
+      <Sandwich>
+        <_sName>BURG</_sName>
+        <_nAppearance type="Number">8</_nAppearance>
+      </Sandwich>
+      <!--
+			<Sandwich>
+				<_sName>BACONATOR</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>-->
+      <!-- ========================================-->
+      <!--<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>salt</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>pepper</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>ketchup</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>-->
+      <!--<Condiment>
+				<_sName>mustard</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>mayonnaise</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>-->
+      <!-- ======================================== -->
+      <Inedible>
+        <_sName>tack</_sName>
+        <_nAppearance type="Number">100</_nAppearance>
+      </Inedible>
+      <!--<Inedible>
+				<_sName>marble</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>
+			<Inedible>
+				<_sName>airfreshener</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>-->
+      <!-- ======================================== -->
+      <!--<Snack>
+				<_sName>cookie1</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>
+			<Snack>
+				<_sName>cookie2</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>-->
+      <Snack>
+        <_sName>egg</_sName>
+        <_nAppearance type="Number">1</_nAppearance>
+      </Snack>
+      <Snack>
+        <_sName>markermode</_sName>
+        <_nAppearance type="Number">1</_nAppearance>
+      </Snack>
+    </Level>
+    <Level>
+      <!-- concept: Showdown, extremely complex -->
+      <_nLevel type="Number">10</_nLevel>
+      <_sTextBeforeLevel>Sandwich Showdown</_sTextBeforeLevel>
+      <_sUrlInfoScreen>data/pictures/infoscreen11.swf</_sUrlInfoScreen>
+      <_aInfoScreenXY type="Array">0,0</_aInfoScreenXY>
+      <!-- coordinates X and Y -->
+      <_nPointsCompleteLevel type="Number">3000</_nPointsCompleteLevel>
+      <_nTimeCompleteLevel type="Number">190</_nTimeCompleteLevel>
+      <!-- one second = 1 -->
+      <_nBackgroundFrame type="Number">5</_nBackgroundFrame>
+      <!-- Background frame -->
+      <_nTipMinSpeed type="Number">2</_nTipMinSpeed>
+      <_nTipMaxSpeed type="Number">12</_nTipMaxSpeed>
+      <_nTipLifeTime type="Number">8</_nTipLifeTime>
+      <!-- one second = 1 -->
+      <_nMaxNumberIngredientsOnScreen type="Number">9</_nMaxNumberIngredientsOnScreen>
+      <_aConponentFirstDelayTime type="Array">0,5</_aConponentFirstDelayTime>
+      <!-- one second = 1 -->
+      <_aCondimentRepeatThrough type="Array">0,15</_aCondimentRepeatThrough>
+      <!-- one second = 1 -->
+      <_aInedibleRepeatThrough type="Array">15,60</_aInedibleRepeatThrough>
+      <!-- one second = 1 -->
+      <_aSnackRepeatThrough type="Array">15,60</_aSnackRepeatThrough>
+      <!-- one second = 1 -->
+      <_bBallShow type="Boolean">0</_bBallShow>
+      <!-- 1 = true, 0 = false -->
+      <_aBallRepeatThrough type="Array">15,60</_aBallRepeatThrough>
+      <!-- one second = 1 -->
+      <_nTimeBonusPointsPerSecond type="Number">50</_nTimeBonusPointsPerSecond>
+      <!-- bonus per second -->
+      <_nEggBonus type="Number">10</_nEggBonus>
+      <!-- one second = 1, plus Time -->
+      <_bPoppingUpOn type="Boolean">1</_bPoppingUpOn>
+      <!-- use 1 = true or 0 = false (fall down the ingredients or not) -->
+      <_aRectangle type="Array">250,200,550,400</_aRectangle>
+      <!-- (X0,Y0,X1,Y1) for falling objects down (XO < X1 and YO < Y1) -->
+      <_nPointTouchWithLine type="Number">-10</_nPointTouchWithLine>
+      <!-- minus point, when ingredient touch with line -->
+      <_nAnimationLineSpeed type="Number">7</_nAnimationLineSpeed>
+      <!-- one second = 1000 -->
+      <_bShowAnimation type="Boolean">1</_bShowAnimation>
+      <!-- use 1 = true or 0 = false (for Car in "level-window") -->
+      <_sNameAnimation>animation1</_sNameAnimation>
+      <_bSoundAnimation type="Boolean">0</_bSoundAnimation>
+      <!-- use 1 = true ("off" default sound in game) or 0 = false ("on" default sound in game) -->
+      <_nTimeCreateSandwich type="Number">6</_nTimeCreateSandwich>
+      <!-- new sandwich fall down (one second = 1) -->
+      <_nMaxSandwiches type="Number">3</_nMaxSandwiches>
+      <!-- maximum sandwiches in left panel -->
+      <_nTimePrompt type="Number">30</_nTimePrompt>
+      <!-- Show Prompt, if a player does not catch the ingredients in the passage of time -->
+      <_nNumberEggTips type="Number">20</_nNumberEggTips>
+      <!-- number Tips for "eggtips" (If you circle this egg it will explode and tips shoot out from it in all directions.) -->
+      <!-- ======================================== -->
+      <Sandwich>
+        <_sName>HAM</_sName>
+        <_nAppearance type="Number">5</_nAppearance>
+      </Sandwich>
+      <!--
+			<Sandwich>
+				<_sName>HAM+</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BIG HAMMY</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>CHEESE</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>-->
+      <Sandwich>
+        <_sName>BURG</_sName>
+        <_nAppearance type="Number">5</_nAppearance>
+      </Sandwich>
+      <Sandwich>
+        <_sName>C-BURG</_sName>
+        <_nAppearance type="Number">5</_nAppearance>
+      </Sandwich>
+      <Sandwich>
+        <_sName>BACON-BURG</_sName>
+        <_nAppearance type="Number">5</_nAppearance>
+      </Sandwich>
+      <Sandwich>
+        <_sName>HERO-BURG</_sName>
+        <_nAppearance type="Number">20</_nAppearance>
+      </Sandwich>
+      <Sandwich>
+        <_sName>BLT</_sName>
+        <_nAppearance type="Number">10</_nAppearance>
+      </Sandwich>
+	  <Sandwich>
+			<_sName>TOP SECRET</_sName>
+			<_nAppearance type="Number">10</_nAppearance>
+		</Sandwich>
+      <!--
+			<Sandwich>
+				<_sName>BLT</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BACONATOR</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>-->
+      <!-- ========================================-->
+      <!--<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>salt</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>pepper</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>ketchup</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>-->
+      <!--<Condiment>
+				<_sName>mustard</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>mayonnaise</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>-->
+      <!-- ======================================== -->
+      <Inedible>
+        <_sName>tack</_sName>
+        <_nAppearance type="Number">100</_nAppearance>
+      </Inedible>
+      <!--<Inedible>
+				<_sName>marble</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>
+			<Inedible>
+				<_sName>airfreshener</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>-->
+      <!-- ======================================== -->
+      <!--<Snack>
+				<_sName>cookie1</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>
+			<Snack>
+				<_sName>cookie2</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>-->
+      <Snack>
+        <_sName>egg</_sName>
+        <_nAppearance type="Number">3</_nAppearance>
+      </Snack>
+      <Snack>
+        <_sName>markermode</_sName>
+        <_nAppearance type="Number">2</_nAppearance>
+      </Snack>
+    </Level>
+  </Mission>
+  <!-- ====================================== MISSION 1 med LEVELS ====================================== -->
+  <!-- ====================================== MISSION 1 med LEVELS ====================================== -->
+  <!-- ====================================== MISSION 1 med LEVELS ====================================== -->
+  <Mission>
+    <Level>
+      <!-- concept: medium length, not too hard, get them in the groove -->
+      <_nLevel type="Number">0</_nLevel>
+      <_sTextBeforeLevel>On the Road Again</_sTextBeforeLevel>
+      <_sUrlInfoScreen>data/pictures/infoscreenA1.swf</_sUrlInfoScreen>
+      <_aInfoScreenXY type="Array">0,0</_aInfoScreenXY>
+      <!-- coordinates X and Y -->
+      <_nBackgroundFrame type="Number">1</_nBackgroundFrame>
+      <!-- Background frame -->
+      <_bShowAnimation type="Boolean">1</_bShowAnimation>
+      <!-- use 1 = true or 0 = false (for Car in "level-window") -->
+      <_sNameAnimation>animation1B</_sNameAnimation>
+      <!-- name of the animation clip in data/pictures -->
+      <_bSoundAnimation type="Boolean">0</_bSoundAnimation>
+      <!-- use 1 = true ("off" default sound in game) or 0 = false ("on" default sound in game) -->
+      <_aRectangle type="Array">250,200,550,400</_aRectangle>
+      <!-- (X0,Y0,X1,Y1) for falling objects down (XO < X1 and YO < Y1) -->
+      <_nAnimationLineSpeed type="Number">8</_nAnimationLineSpeed>
+      <!-- one second = 1000 -->
+      <_nTipMinSpeed type="Number">4</_nTipMinSpeed>
+      <_nTipMaxSpeed type="Number">12</_nTipMaxSpeed>
+      <_nTipLifeTime type="Number">6</_nTipLifeTime>
+      <!-- one second = 1 -->
+      <_nTimePrompt type="Number">30</_nTimePrompt>
+      <!-- Show Prompt, if a player does not catch the ingredients in the passage of time -->
+      <_bPoppingUpOn type="Boolean">1</_bPoppingUpOn>
+      <!-- use 1 = true or 0 = false (fall down the ingredients or not) -->
+      <_nPointsCompleteLevel type="Number">1500</_nPointsCompleteLevel>
+      <_nTimeCompleteLevel type="Number">80</_nTimeCompleteLevel>
+      <!-- one second = 1 -->
+      <_nPointTouchWithLine type="Number">-5</_nPointTouchWithLine>
+      <!-- minus point, when ingredient touch with line -->
+      <_nTimeBonusPointsPerSecond type="Number">4</_nTimeBonusPointsPerSecond>
+      <!-- bonus per second -->
+      <_nMaxNumberIngredientsOnScreen type="Number">6</_nMaxNumberIngredientsOnScreen>
+      <_nTimeCreateSandwich type="Number">4</_nTimeCreateSandwich>
+      <!-- new sandwich fall down (one second = 1) -->
+      <_nMaxSandwiches type="Number">3</_nMaxSandwiches>
+      <!-- maximum sandwiches in left panel -->
+      <_aConponentFirstDelayTime type="Array">0,5</_aConponentFirstDelayTime>
+      <!-- one second = 1 -->
+      <_aCondimentRepeatThrough type="Array">15,60</_aCondimentRepeatThrough>
+      <!-- one second = 1 -->
+      <_aInedibleRepeatThrough type="Array">15,60</_aInedibleRepeatThrough>
+      <!-- one second = 1 -->
+      <_aSnackRepeatThrough type="Array">15,60</_aSnackRepeatThrough>
+      <!-- one second = 1 -->
+      <_bBallShow type="Boolean">0</_bBallShow>
+      <!-- 1 = true, 0 = false -->
+      <_aBallRepeatThrough type="Array">15,60</_aBallRepeatThrough>
+      <!-- one second = 1 -->
+      <_nEggBonus type="Number">10</_nEggBonus>
+      <!-- one second = 1, plus Time -->
+      <_nNumberEggTips type="Number">20</_nNumberEggTips>
+      <!-- number Tips for "eggtips"  -->
+      <!-- ======================================== -->
+      <!--<Sandwich>
+				<_sName>SUPER BIG-HOAGIE</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>V-BURG</_sName>
+				<_nAppearance type="Number">7</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>C-BURG</_sName>
+				<_nAppearance type="Number">7</_nAppearance>
+			</Sandwich>
+			-->
+      <Sandwich>
+        <_sName>BURG</_sName>
+        <_nAppearance type="Number">14</_nAppearance>
+      </Sandwich>
+      <!--
+			<Sandwich>
+				<_sName>GRILL-C</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>GRILL-C+T</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>SALAD</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>VEGIWICH</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BLT</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BLT</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BACONATOR</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>FISH</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>HB</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich> -->
+      <!-- ========================================-->
+      <!--<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment> 
+			<Condiment>
+				<_sName>salt</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>pepper</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>ketchup</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>mustard</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment> 
+			<Condiment>
+				<_sName>mayonnaise</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment> -->
+      <!-- ======================================== -->
+      <!--<Inedible>
+				<_sName>tack</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>
+			<Inedible>
+				<_sName>marble</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>
+			<Inedible>
+				<_sName>airfreshener</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>-->
+      <!-- ======================================== -->
+      <!--<Snack>
+				<_sName>cookie1</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>
+			<Snack>
+				<_sName>cookie2</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>
+			<Snack> 
+				<_sName>egg</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>-->
+      <Snack>
+        <_sName>markermode</_sName>
+        <_nAppearance type="Number">97</_nAppearance>
+      </Snack>
+      <Snack>
+        <_sName>egg</_sName>
+        <_nAppearance type="Number">100</_nAppearance>
+      </Snack>
+    </Level>
+    
+  </Mission>
+    <Mission>
+    <Level>
+      <!-- concept: medium length, not too hard, get them in the groove -->
+      <_nLevel type="Number">0</_nLevel>
+      <_sTextBeforeLevel>On the Road Again</_sTextBeforeLevel>
+      <_sUrlInfoScreen>data/pictures/infoscreenA1.swf</_sUrlInfoScreen>
+      <_aInfoScreenXY type="Array">0,0</_aInfoScreenXY>
+      <!-- coordinates X and Y -->
+      <_nBackgroundFrame type="Number">1</_nBackgroundFrame>
+      <!-- Background frame -->
+      <_bShowAnimation type="Boolean">1</_bShowAnimation>
+      <!-- use 1 = true or 0 = false (for Car in "level-window") -->
+      <_sNameAnimation>animation1B</_sNameAnimation>
+      <!-- name of the animation clip in data/pictures -->
+      <_bSoundAnimation type="Boolean">0</_bSoundAnimation>
+      <!-- use 1 = true ("off" default sound in game) or 0 = false ("on" default sound in game) -->
+      <_aRectangle type="Array">250,200,550,400</_aRectangle>
+      <!-- (X0,Y0,X1,Y1) for falling objects down (XO < X1 and YO < Y1) -->
+      <_nAnimationLineSpeed type="Number">8</_nAnimationLineSpeed>
+      <!-- one second = 1000 -->
+      <_nTipMinSpeed type="Number">4</_nTipMinSpeed>
+      <_nTipMaxSpeed type="Number">12</_nTipMaxSpeed>
+      <_nTipLifeTime type="Number">6</_nTipLifeTime>
+      <!-- one second = 1 -->
+      <_nTimePrompt type="Number">30</_nTimePrompt>
+      <!-- Show Prompt, if a player does not catch the ingredients in the passage of time -->
+      <_bPoppingUpOn type="Boolean">1</_bPoppingUpOn>
+      <!-- use 1 = true or 0 = false (fall down the ingredients or not) -->
+      <_nPointsCompleteLevel type="Number">1500</_nPointsCompleteLevel>
+      <_nTimeCompleteLevel type="Number">80</_nTimeCompleteLevel>
+      <!-- one second = 1 -->
+      <_nPointTouchWithLine type="Number">-5</_nPointTouchWithLine>
+      <!-- minus point, when ingredient touch with line -->
+      <_nTimeBonusPointsPerSecond type="Number">4</_nTimeBonusPointsPerSecond>
+      <!-- bonus per second -->
+      <_nMaxNumberIngredientsOnScreen type="Number">6</_nMaxNumberIngredientsOnScreen>
+      <_nTimeCreateSandwich type="Number">4</_nTimeCreateSandwich>
+      <!-- new sandwich fall down (one second = 1) -->
+      <_nMaxSandwiches type="Number">3</_nMaxSandwiches>
+      <!-- maximum sandwiches in left panel -->
+      <_aConponentFirstDelayTime type="Array">0,5</_aConponentFirstDelayTime>
+      <!-- one second = 1 -->
+      <_aCondimentRepeatThrough type="Array">15,60</_aCondimentRepeatThrough>
+      <!-- one second = 1 -->
+      <_aInedibleRepeatThrough type="Array">15,60</_aInedibleRepeatThrough>
+      <!-- one second = 1 -->
+      <_aSnackRepeatThrough type="Array">15,60</_aSnackRepeatThrough>
+      <!-- one second = 1 -->
+      <_bBallShow type="Boolean">0</_bBallShow>
+      <!-- 1 = true, 0 = false -->
+      <_aBallRepeatThrough type="Array">15,60</_aBallRepeatThrough>
+      <!-- one second = 1 -->
+      <_nEggBonus type="Number">10</_nEggBonus>
+      <!-- one second = 1, plus Time -->
+      <_nNumberEggTips type="Number">20</_nNumberEggTips>
+      <!-- number Tips for "eggtips"  -->
+      <!-- ======================================== -->
+      <!--<Sandwich>
+				<_sName>SUPER BIG-HOAGIE</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>V-BURG</_sName>
+				<_nAppearance type="Number">7</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>C-BURG</_sName>
+				<_nAppearance type="Number">7</_nAppearance>
+			</Sandwich>
+			-->
+      <Sandwich>
+        <_sName>BURG</_sName>
+        <_nAppearance type="Number">14</_nAppearance>
+      </Sandwich>
+      <!--
+			<Sandwich>
+				<_sName>GRILL-C</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>GRILL-C+T</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>SALAD</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>VEGIWICH</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BLT</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BLT</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>BACONATOR</_sName>
+				<_nAppearance type="Number">8</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>FISH</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich>
+			<Sandwich>
+				<_sName>HB</_sName>
+				<_nAppearance type="Number">10</_nAppearance>
+			</Sandwich> -->
+      <!-- ========================================-->
+      <!--<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment> 
+			<Condiment>
+				<_sName>salt</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>pepper</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>ketchup</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>mustard</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment> 
+			<Condiment>
+				<_sName>mayonnaise</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment>
+			<Condiment>
+				<_sName>candy</_sName>
+				<_nAppearance type="Number">33</_nAppearance>
+			</Condiment> -->
+      <!-- ======================================== -->
+      <!--<Inedible>
+				<_sName>tack</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>
+			<Inedible>
+				<_sName>marble</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>
+			<Inedible>
+				<_sName>airfreshener</_sName>
+				<_nAppearance type="Number">100</_nAppearance>
+			</Inedible>-->
+      <!-- ======================================== -->
+      <!--<Snack>
+				<_sName>cookie1</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>
+			<Snack>
+				<_sName>cookie2</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>
+			<Snack> 
+				<_sName>egg</_sName>
+				<_nAppearance type="Number">1</_nAppearance>
+			</Snack>-->
+      <Snack>
+        <_sName>markermode</_sName>
+        <_nAppearance type="Number">97</_nAppearance>
+      </Snack>
+      <Snack>
+        <_sName>egg</_sName>
+        <_nAppearance type="Number">100</_nAppearance>
+      </Snack>
+    </Level>
+    
+  </Mission>
+</ignoreMeContainer>

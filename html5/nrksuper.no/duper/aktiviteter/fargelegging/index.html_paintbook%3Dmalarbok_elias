@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+	<meta name="Description" content="I Pysselboken kan du färglägga bilder och sätta ut magiska stämplar.">
+	<!--[if (gte IE 7)&(lt IE 9)]>
+	<script language="javascript" type="text/javascript" src="flashcanvas/flashcanvas.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" type="text/css" href="paintbook.css?v=3_3" />
+	<script src="http://www.svt.se/barnkanalen/statiskt/js/libs/modernizr.custom.82766.js" type="text/javascript"></script>
+	<script src="http://media.svt.se/download/flash/fiktion/spel/js/s_code.js" type="text/javascript"></script>
+	<script src="http://media.svt.se/download/flash/fiktion/spel/js/siteCatalystStatistics.js" type="text/javascript"></script>
+	<script src="kinetic-min.js?v=3_2"></script>
+	<script src="soundmanager/script/soundmanager2-nodebug-jsmin.js"></script>
+	<script src="paintbook-min.js?v=3_2"></script>
+	<script src="karusell.js"></script>
+	<title>Pysselboken</title>
+	<body>
+	<div class="paintBookBodyWrapper">
+		<!--No javascript-->
+		<noscript>
+		    <img src="../img/nojavascript.png" alt="Be en vuxen slå på Javascript" />
+			<img src="http://ld.svt.se/svt/svt/s?svtse.barn.sektion.spel.malarboken.index&svt_context=popup" width="1" height="1" alt=""/>
+		</noscript>
+		<!--End No javascript-->		
+		
+		<div class="paintBookCarousel">
+			<div class="svtMultiCarouselWrapper barnCharCarouselWrapper svtNoPrint">
+				<div class="svtJsMultiCarousel barnCharCarousel svtTransition">
+					<ul class="svtJsMultiCarouselSlider" id="svtJsSlider">
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="paintBookWrapper">
+			<div class="paintBookMenu1">
+				<div class="firstPart">
+					<ul class="stamps">
+					</ul>
+					<div class="addonPlace1">
+					</div>
+				</div>
+				<div class="secondPart">
+					<ul class="colors highlight">
+					</ul>
+					<ul class="utilities first highlight">
+						<li class="eraser icon"><div></div></li>
+					</ul>
+					<ul class="utilities second highlight">
+						<li class="save icon"><div></div></li>
+						<li class="play icon"><div></div></li>
+						<li class="send icon"><div></div></li>
+					</ul>
+					<div class="addonPlace2">
+						<div class="modalPlacer">
+							<div class="paintBookModal" style="display:none">					
+								<a href="#" class="close">
+									<span class="closeIcon"></span>
+								</a>
+								<div class="modalContent">
+									<div class="modalSaveImage" style="display:none">
+										<div class="paintBookToolTip">
+											<div class="toolTipImage"></div>
+											<div class="toolTipContent largeText">
+												Pek på bildet (eller høyreklikk) for å lagre det.
+											</div>
+										</div>
+										<!-- src will be updated when print image is created -->
+										<img src="icons/icons.png" alt="print image" class="printImage" />
+									</div>
+									<div class="modalSendImage" style="display:none">
+										<div class="modalSendImageContent">
+										
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>					
+						<ul class="addons">
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div id="paintBookContainer"></div>
+			<div style="clear:both"></div>
+		</div>
+	</div>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="jquery-1.8.3.min.js"><\/script>')</script>
+	<script type="text/javascript">
+	if (typeof window.JSON === 'undefined') {
+		document.write('<script src="http://www.svt.se/barnkanalen/statiskt/js/libs/json2.js"><\/script>');
+	}
+	</script>
+	<script>
+	var paintBookInit = {};
+	paintBookInit.getUrlParam = function(name){
+		var result = new RegExp(name + "=([^&]*)", "i").exec(window.location.search);
+		return result && result[1] || ""; 
+	};
+	paintBookInit.name = paintBookInit.getUrlParam('paintbook');
+	paintBookInit.hash = 'malarbocker/'+paintBookInit.name+'/';
+	
+	paintBookInit.init = function() {
+		if(!!document.createElement('canvas').getContext || typeof(FlashCanvas)!='undefined') {
+			paintBookSettings.hash = paintBookInit.hash;
+			
+			//SiteCatalyst
+			function logSiteCatalyst() {
+				if (paintBookSettings.statisticsSiteCatalyst) {
+					catalyststat.logstat(paintBookSettings.statisticsSiteCatalyst);
+				}
+			}
+			
+			paintBookSettings.logSiteCatalystFunction = logSiteCatalyst;
+			paintBookInit.app = PaintBook.app(paintBookSettings);
+			
+			// we need to refresh carousel manually when paintbook has been reinited,
+			// since automatic refresh fails due to that paintBookBodyWrapper 
+			// is hidden during reinit.
+			$('.paintBookBodyWrapper').bind('paintBook.reinitComplete',function(){
+				paintBookInit.carousel._refreshResizeValues();
+			});
+			
+			(function reorderPaintBookApp() {
+				paintBookInit.timeout = setTimeout(function(){
+					paintBookInit.app.reorder();
+					reorderPaintBookApp();
+				}, 3000);
+			})();
+		} else {
+			$('#paintBookContainer').html('<img src="../img/noflash.png" alt="Be en vuxen slå på Flash" />');
+			$('.paintBookMenu1').hide();
+			$('.paintBookBodyWrapper').css('overflow','visible');
+		}
+		
+		paintBookInit.carousel = new svt.barn.MultiCarousel($('.svtJsMultiCarousel').get(0),{});
+	};
+	
+	paintBookInit.isDemo = paintBookInit.getUrlParam('isdemo')=='true';
+	if(paintBookInit.isDemo) {
+		var getFile = function(url) {
+			var useUrl = url.replace('malarbocker/','');
+			for(var c=0,l=parent.window.files.length;c<l;c++) {
+				if(parent.window.files[c].fileName == useUrl) 
+					return parent.window.files[c].file;
+			}
+			return '';
+		}
+		
+		var file = getFile(paintBookInit.name+'/settings.js').replace('var paintBookSettings=','');
+		var paintBookSettings = $.parseJSON(file);
+		
+		paintBookSettings.getSrc = function(src) {
+			return getFile(src.replace('malarbocker/',''));
+		};
+		$.ajax = function(params){
+			params.url = params.url.split('?')[0];
+			var file = getFile(params.url);
+			var _this = this;
+			if(file=='') return false;
+			var fileEnding = params.url.split('.').pop();
+			
+			if(fileEnding=='svg') {
+				var reader = new FileReader();
+				reader.onload = function(e) {
+					_this.url = params.url;
+					var svgContent = e.target.result;
+					params.success.apply( _this, [svgContent] );
+				}
+				reader.readAsText(file);
+			} else params.success.apply( this, [file] );
+		}
+
+		paintBookInit.init();
+	}
+	else{
+		$.getScript(paintBookInit.hash+"settings.js", paintBookInit.init);
+	}
+	$(window).on('beforeunload', function(){
+		// kinetic uses hidden canvases. show them before unloading, otherwise IE
+		// garbage collection ignores the flash canvas hidden object, and causes memory leak
+		$('canvas').css('display','block');
+	});
+	$(window).unload(function(){
+		clearTimeout(paintBookInit.timeout);
+		paintBookInit.app && paintBookInit.app.unload();
+	});
+	</script>
+	</body>
+</html>

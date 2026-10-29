@@ -1,0 +1,475 @@
+/* from barn.css */
+.svtTransition {
+-moz-transition: all 0.3s ease 0s;
+-webkit-transition: all 0.3s ease 0s;
+-o-transition: all 0.3s ease 0s;
+-ms-transition: all 0.3s ease 0s;
+transition: all 0.3s ease 0s;
+-moz-transform: scale 0.5;
+-webkit-transform: scale 0.5;
+-o-transform: scale 0.5;
+-ms-transform: scale 0.5;
+transform: scale 0.5;
+}
+div, canvas, a {
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+font-size: 100%;
+vertical-align: baseline;
+background: transparent;
+}
+.svtMultiCarouselWrapper {
+-moz-transition: all 0.3s ease 0s;
+-webkit-transition: all 0.3s ease 0s;
+-o-transition: all 0.3s ease 0s;
+-ms-transition: all 0.3s ease 0s;
+transition: all 0.3s ease 0s;
+clear: both;
+overflow: hidden;
+height: 100%;
+position: relative;
+}
+.barnCharCarouselWrapper {
+float: left;
+width: 100%;
+height: 100%;
+margin-bottom: 0;
+}
+.barnCharCarouselWrapper .barnCharCarousel {
+overflow: hidden;
+margin: 0;
+padding-bottom: 50px;
+overflow: hidden;
+height: 72px;
+}
+.svtMultiCarouselWrapper .svtJsMultiCarouselSlider {
+margin: 0;
+width: 20000px;
+}
+.svtXNoListStyleType, .svtTablaContent-Links, .svtMultiCarouselWrapper .svtJsMultiCarouselSlider, .barnMultiVideoCategoryCarousel .svtJsMultiCarouselSlider, .boliMultiVideoCategoryCarousel .svtJsMultiCarouselSlider {
+list-style-type: none;
+}
+ul, ol {
+margin-left: 1.5em;
+}
+.svtMultiCarouselWrapper .svtJsMultiCarouselSlider .svtJsMultiCarouselItem {
+-moz-transition: all 0.3s ease 0s;
+-webkit-transition: all 0.3s ease 0s;
+-o-transition: all 0.3s ease 0s;
+-ms-transition: all 0.3s ease 0s;
+transition: all 0.3s ease 0s;
+float: left;
+position: relative;
+}
+.barnCharCarouselWrapper img {
+width: 100px;
+}
+.barnCharCarouselWrapper img {
+-moz-box-shadow: 0px 5px 8px 0 rgba(0,0,0,0.2);
+-webkit-box-shadow: 0px 5px 8px 0 rgba(0,0,0,0.2);
+box-shadow: 0px 5px 8px 0 rgba(0,0,0,0.2);
+border: 1px solid #aaa;
+cursor: pointer;
+width: 110px;
+}
+img, video, object {
+max-width: 100%;
+}
+.no-touch a:hover {
+color: #2890af;
+text-decoration: underline;
+}
+.barnCharCarouselWrapper .svtJsMultiCarouselNavItem {
+top: auto;
+bottom: 0;
+}
+a, a:active, a:visited {
+color: #2890af;
+text-decoration: none;
+}
+a:link, .svtJsClickArea, .svtJsToggleMenu {
+-webkit-tap-highlight-color: #ff5e99;
+}
+a:hover {
+color: #0059b3;
+text-decoration: underline;
+}
+a, a:active, a:visited {
+color: #0059b3;
+text-decoration: none;
+}
+a:hover, a:active {
+outline: 0;
+}
+.svtJsMultiCarouselNavItem {
+-moz-transition: all 0.3s ease 0s;
+-webkit-transition: all 0.3s ease 0s;
+-o-transition: all 0.3s ease 0s;
+-ms-transition: all 0.3s ease 0s;
+transition: all 0.3s ease 0s;
+position: absolute;
+z-index: 3;
+top: 6px;
+height: 70px;
+width: 102px;
+background: blue;
+opacity: 0.9;
+}
+.svtJsMultiCarouselNavItem.inactive {
+opacity: 0.4;
+}
+.svtJsMultiCarouselNavItem.left {
+left: 0;
+background: transparent url("icons/barn-sprite-carousel.png") no-repeat 0 -500px;
+}
+.svtJsMultiCarouselNavItem.right {
+right: 0;
+background: transparent url("icons/barn-sprite-carousel.png") no-repeat 0 -400px;
+}
+/* // from barn.css */
+
+body {
+	background:none;
+	font-size: 13px/1.231;
+	color: #1a1a1a;
+	font-family: "Helvetica Neue",Arial,Helvetica,"Nimbus Sans L","Bitstream Vera Sans",sans-serif;
+}
+html, body {
+	position:absolute;
+	top: 0;
+    left: 0;
+    right: 0;
+	-webkit-backface-visibility:visible;
+}
+* {
+  /* try to remove transform style if set, e.g. outside iframe etc.
+     since it slows down android  */
+  -webkit-transform-style: flat !important;
+  border:none;
+}
+div,canvas,a {
+	-webkit-tap-highlight-color: rgba(0,0,0,0); 
+}
+canvas {
+	background:transparent;
+	border-radius:10px;
+}
+.paintBookWrapper.landscape.wide {
+	background:url('icons/dots.png') 210px 332px no-repeat;
+}
+.paintBookBodyWrapper {
+	overflow:hidden;	
+}
+.paintBookBodyWrapper.samsungHack #paintBookContainer {
+	padding-bottom:100000px;
+	padding-right:100000px;
+}
+/* triggers hardware acceleration */
+.paintBookWrapper .hardware-accelerate .kineticjs-content canvas:last-child {
+	-webkit-transform: translateZ(0);
+}
+
+.hide {
+	display:none;
+}
+.paintBookWrapper {
+	position:relative;
+}
+#paintBookContainer {
+	position:absolute;
+}
+
+/* carousel */
+li.svtJsMultiCarouselItem  {
+	position:relative;
+	float:left;
+}
+.paintBookCarousel .waterStamp {
+	background:url('icons/icons.png?v=3_1');
+	background-position: 0 -430px;
+	height:43px;
+	width:100px;
+	position:absolute;
+	bottom:10px;
+}
+.paintBookCarousel .waterStamp:hover {
+	cursor:pointer;
+}
+.paintBookCarousel li.active{
+	border-bottom:2px solid black;
+}
+.paintBookCarousel {
+	height:70px;
+}
+.barnCharCarouselWrapper img {
+	width:100px;
+}
+
+/* modal overlay save-image */
+.paintBookModal {
+	position:absolute;
+	background-color:white;
+	z-index:399;
+	bottom:20px;
+	border:4px solid #11748b;
+}
+.paintBookModal a.close {
+	position:absolute;
+	right:-20px;
+	top:-20px;
+}
+.paintBookModal a.close span {
+	background:url('icons/icons.png?v=3_1');
+	background-position: -62px -932px;
+	height:38px;
+	width:38px;
+	display:block;
+}
+.paintBookModal .paintBookToolTip {
+	background-color:#FFFFFF;
+	padding:20px 20px 20px 100px;
+	position:absolute;
+	bottom:5px;
+}
+.paintBookModal .largeText {
+	color:#3b3b3e;
+	font-weight:bold;
+	font-size:12pt;
+}
+.paintBookModal .paintBookToolTip .toolTipImage {
+	height:42px;
+	width:80px;
+	position:absolute;
+	top:20px;
+	left:20px;
+	background:url('icons/icons.png?v=3_1') -39px -845px no-repeat;
+}
+.paintBookModal .modalSendImageContent {
+	padding:10px 20px 20px 20px;
+}
+.paintBookModal .modalSendImage input{
+	border:1px solid #7b7b7b;
+	border-radius:5px;
+	width:80%;
+	max-width:200px;
+}
+.paintBookModal .modalSendImage input.inputError {
+	border-color:red;
+}
+.paintBookModal .modalSendImage p {
+	padding-top:10px;
+}
+.paintBookModal .modalSendImage p.padBottom {
+	padding-bottom:10px;
+}
+
+/* addons */
+.paintBookMenu1 ul.addons > li.current:after {
+	background-image:url('icons/ring.png');
+	content: "";
+    height: 71px;
+    left: -5px;
+    position: absolute;
+    top: -10px;
+    width: 85px;
+}
+
+/* menu, palette */
+.paintBookWrapper.landscape.wide .paintBookMenu1 { 
+	
+}
+.paintBookWrapper.landscape.wide .paintBookMenu1 .firstPart {
+	background:url('icons/paper.png') no-repeat;
+	padding:32px 20px 0 23px;
+	height:256px;
+	width:193px;
+}
+.paintBookWrapper.landscape.wide .paintBookMenu1 .secondPart {
+	background:url('icons/palett.png') no-repeat;
+	padding-left:23px;
+	width:188px;
+	margin-top:-160px;
+	height:400px;
+}
+.paintBookWrapper.landscape.wide .paintBookMenu1 .secondPart.movedDown {
+	margin-top:-45px;
+}
+.paintBookWrapper.landscape.wide .paintBookMenu1 ul.colors {
+	padding-top:20px;
+}
+.paintBookWrapper.landscape.wide .paintBookMenu1 ul.stamps {
+	height:94px;
+}
+.paintBookWrapper.landscape.wide .paintBookMenu1 ul.utilities.first {
+	height:40px;
+}
+.paintBookWrapper.landscape.wide .paintBookMenu1 ul.utilities.second {
+	padding-top:45px;
+	clear:both;
+}
+
+.paintBookWrapper .paintBookMenu1 ul.addons {
+	clear:both;
+}
+/* menu */
+.paintBookMenu1 ul > li {
+	position:relative;
+	cursor:pointer;
+	float:left;
+	width:28px;
+	height:28px;
+	background:url('icons/icons.png?v=3_1');
+	background-position: 0 0;
+	padding:5px;
+	float:left;
+	margin:2px;
+}
+.paintBookWrapper.portrait .paintBookMenu1 {
+	padding:10px 0 20px 0;
+	background:url('icons/paperpart.png') repeat-x;
+	min-height:250px;
+	box-shadow: 1px 8px 11px -5px rgba(10, 10, 0, 0.3) inset;
+	-moz-box-shadow: 1px 8px 11px -5px rgba(10, 10, 0, 0.3) inset;
+   -webkit-box-shadow: 1px 8px 11px -5px rgba(10, 10, 0, 0.3) inset;
+   
+}
+.paintBookWrapper.landscape.wide .paintBookMenu1 ul.colors {
+	height:210px;
+}
+.paintBookWrapper .paintBookMenu1 ul.addons > li{
+	width:60px;
+	height:45px;
+	background:none;
+}
+
+.paintBookMenu1 ul.colors > li {
+	padding:4px;
+	height:30px;
+	width:30px;
+}
+.paintBookMenu1 ul.colors > li > div {
+	border:1px solid #bdbfc1;
+	height:28px;
+	width:28px;
+}
+.paintBookMenu1 ul.colors > li.rainbow > div {
+	border:none;
+	height:30px;
+	width:30px;
+}
+.paintBookMenu1 ul.highlight > li:after {
+	background-image:url('icons/icons.png?v=3_1');
+	content: "";
+    height: 22px;
+    left: 5px;
+    position: absolute;
+    top: 5px;
+    width: 30px;
+	background-position: 0 -1020px;
+}
+.paintBookMenu1 ul.stamps > li {
+	background-position: 0 -932px;
+} 
+.paintBookMenu1 ul.stamps > li.active {
+	background-position: 0 -845px;
+}
+.no-touch .paintBookMenu1 ul.stamps > li:hover {
+	background-position: 0 -845px;
+}
+.paintBookMenu1 ul.colors > li.active {
+	background-position: 0 -88px;
+}
+.no-touch .paintBookMenu1 ul.colors > li:hover {
+	background-position: 0 -88px;
+}
+.no-touch .paintBookMenu1 ul.utilities > li:hover{
+	background-position: -62px -264px;
+}
+.paintBookMenu1 ul.utilities > li.active{
+	background-position: -62px -264px;
+}
+
+.paintBookMenu1 ul {
+	list-style-type: none;
+	margin:0;
+	padding:0;
+}
+.paintBookMenu1 ul > li > div{
+	height:28px;
+	width:28px;
+	border-radius:5px;
+}
+.paintBookMenu1 ul > li.icon, 
+.paintBookMenu1 ul > li.icon > div {
+	background:url('icons/icons.png?v=3_1');
+}
+.paintBookMenu1 ul > li.icon {
+	background-position: 0 -176px;
+}
+.paintBookMenu1 ul > li.icon.eraser > div {
+	background-position: 0 -523px;
+}
+.paintBookMenu1 ul.colors > li.rainbow > div {
+	background:url('icons/icons.png');
+	background-position: 0 -601px;
+}
+.paintBookMenu1 ul > li.icon.save > div {
+	background-position: 0 -679px;
+}
+.paintBookMenu1 ul > li.icon.send > div {
+	background-position: 0 -1047px;
+}
+.paintBookMenu1 ul > li.icon.play > div {
+	background-position: 0 -757px;
+}
+.paintBookMenu1 .modalPlacer {
+	position:relative;
+}
+.paintBookMenu1 .addonPlace2 {
+	clear:both;
+}
+/* buttons */
+a.paintBookButton {
+   border-top: 1px solid #000000;
+   background: #282828;
+   background: -webkit-gradient(linear, left top, left bottom, from(#545454), to(#282828));
+   background: -webkit-linear-gradient(top, #545454, #282828);
+   background: -moz-linear-gradient(top, #545454, #282828);
+   background: -ms-linear-gradient(top, #545454, #282828);
+   background: -o-linear-gradient(top, #545454, #282828);
+   padding: 10px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-weight:bold;
+   font-size:12pt;
+   text-decoration: none;
+   line-height:50px;
+   }
+a.paintBookButton:hover {
+   border-top-color: #4f4f4f;
+   background: #000;
+   color: #ccc;
+   text-decoration: none;
+   }
+a.paintBookButton:active {
+   border-top-color: #282828;
+   background: #282828;
+   text-decoration: none;
+   }
+@media only screen and (min-width: 601px){
+	.barnCharCarouselWrapper .barnCharCarousel {
+	margin: 0 8%;
+	padding-bottom: 30px;
+	}
+}

@@ -1,0 +1,22 @@
+# NRK Super Spill (fan archive) - server settings
+ErrorDocument 404 /nrksuperspill/404.html
+AddType application/wasm .wasm
+AddType application/x-shockwave-flash .swf
+AddType application/x-director .dcr .dir .dxr .cct .cst .cxt
+AddType application/octet-stream .w3d .x32 .xtra
+AddType application/manifest+json .webmanifest
+<IfModule mod_headers.c>
+  # pages, scripts and data change with every build: always revalidate
+  <FilesMatch "\.(html|js|json|webmanifest)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  # game files and players never change under the same name (patched games get new names, players hashed
+  # names): browsers may keep them a week. Not images - covers can change between builds.
+  <FilesMatch "\.(swf|dcr|dir|dxr|cct|cst|cxt|w3d|wasm|mp3|ogg|m4a)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+  # the service worker must never be cached
+  <Files "sw.js">
+    Header set Cache-Control "no-cache, no-store"
+  </Files>
+</IfModule>

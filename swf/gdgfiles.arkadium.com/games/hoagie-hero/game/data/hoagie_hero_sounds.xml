@@ -1,0 +1,67 @@
+<Sounds>
+  <Sound name="backgroundMusicSnd" file="background_music.mp3" soundType="1" volume="50" inLibrary="false"/>
+  
+  <Sound name="clickSnd" file="button_click.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="rolloverSnd" file="button_rollover.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="startSnd" file="button_start.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="ingredientDownSnd" file="ingredient_down.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="flighOnSandwichSnd" file="fligh_on_sandwich.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="sandwichFormedSnd" file="sandwich_formed.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="sandwichMoveLeftSnd" file="sandwich_move_left.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="condimentViewSnd" file="condiment_view.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="inedibleEatSnd" file="inedible_eat.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="timeRanOutSnd" file="time_ran_out.mp3" soundType="0" volume="100" inLibrary="false"/>
+  
+  <Sound name="blinkPens1Snd" file="blink_pens1.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="blinkPens2Snd" file="blink_pens2.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="blinkPens3Snd" file="blink_pens3.mp3" soundType="0" volume="100" inLibrary="false"/>
+  
+  <Sound name="downPanelSnd" file="down_panel.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="bonusTimeSnd" file="bonus_time.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="pencilMarkerSnd" file="pencil_marker.mp3" soundType="0" volume="100" inLibrary="false"/>
+  
+  <Sound name="line_destroying_loopSnd" file="line_destroying_loop.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="line_destroyedSnd" file="line_destroyed.mp3" soundType="0" volume="100" inLibrary="false"/>
+  
+  <Sound name="loop_drawing_pencilSnd" file="loop_drawing_pencil.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="loop_drawing_penSnd" file="loop_drawing_pen.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="start_drawing_pencilSnd" file="start_drawing_pencil.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="start_drawing_penSnd" file="start_drawing_pen.mp3" soundType="0" volume="100" inLibrary="false"/>
+  
+  <Sound name="introSnd" file="intro.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="gameoverSnd" file="gameover.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="levelSnd" file="level.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="win_jingleSnd" file="win_jingle.mp3" soundType="0" volume="85" inLibrary="false"/>
+  <Sound name="lose_jingle" file="lose_jingle.mp3" soundType="0" volume="70" inLibrary="false"/>
+  
+  <Sound name="timerAlmostOutSnd" file="timer_almost_out.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="ingredientHitsTable1Snd" file="ingredient_hits_table_1.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="ingredientHitsTable2Snd" file="ingredient_hits_table_2.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="ingredientHitsTable3Snd" file="ingredient_hits_table_3.mp3" soundType="0" volume="100" inLibrary="false"/>
+  
+  <Sound name="downPanel1Snd" file="down_panel_1.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="downPanel2Snd" file="down_panel_2.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="downPanel3Snd" file="down_panel_3.mp3" soundType="0" volume="100" inLibrary="false"/>
+  
+  <Sound name="tipsShowSnd" file="tips_show.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="eggCapShowSnd" file="egg_cap_show.mp3" soundType="0" volume="50" inLibrary="false"/>
+  <Sound name="eggCapTextSnd" file="egg_cap_text.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="progressBarFinishSnd" file="progress_bar_finish.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="tipsShowEndLevel_1Snd" file="tips_show_end_level_1.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="tipsShowEndLevel_2Snd" file="tips_show_end_level_2.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="timerBlinkSnd" file="timer_blink.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="openCloseWindowSnd" file="open_close_window.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="moveScoreSnd" file="move_score.mp3" soundType="0" volume="100" inLibrary="false"/>
+  
+  <Sound name="marbleSnd" file="marble.mp3" soundType="0" volume="115" inLibrary="false"/>
+  <Sound name="showBlueCheeseSnd" file="show_blue_cheese.mp3" soundType="0" volume="100" inLibrary="false"/>
+  
+  <Sound name="magicPenLoopSnd" file="magic_pen_loop.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="magicPenPickupSnd" file="magic_pen_pickup.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="eggCoinExplosionSnd" file="egg_coin_explosion.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="truckBackwardSnd" file="truck_backward.mp3" soundType="0" volume="100" inLibrary="false"/>
+  <Sound name="truckForwardSnd" file="truck_forward.mp3" soundType="0" volume="1" inLibrary="false"/>
+  <Sound name="squirtSnd" file="squirt.mp3" soundType="0" volume="40" inLibrary="false"/>
+  <Sound name="pointCountSnd" file="point_count.mp3" soundType="0" volume="200" inLibrary="false"/>
+  <Sound name="tapSnd" file="tap.mp3" soundType="0" volume="200" inLibrary="false"/>
+</Sounds>

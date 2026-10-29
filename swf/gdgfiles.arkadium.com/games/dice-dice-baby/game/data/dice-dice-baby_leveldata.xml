@@ -1,0 +1,189 @@
+<!--
+This is example level data. Basically every game will have some game design data that gets loaded externaly from xml. 
+This provides one very simple method of importing the data into the data manager.
+
+the code will create objects with the associated node names in the data manager. Just change and add lines and then call the variables.
+-->
+
+<!--
+Bonuses:
+1 - Ones to Twos
+2 - Ones to Threes
+3 - Ones to Fours
+4 - Ones to Fives
+5 - Ones to Sixes
+6 - Remove Ones
+7 - Remove Ones Columns
+8 - Remove Ones Rows
+9 - Remove Dice
+10 - Radial Dice Removal
+//-->
+
+<ignoreMeContainer>
+	<BonusesList>
+	
+		<Bonus effect="10" points="25" payoutName="BOMB'S AWAY" description="A Quarter of the Ones Explode and Take Out Neighboring Dice, $25 Bonus" affectedPercent=".25" requirement="1"/>
+		<Bonus effect="10" points="50" payoutName="HEAVY ARTILLERY" description="Half of the Ones Explode and Take Out Neighboring Dice, $50 Bonus" affectedPercent=".5" requirement="15"/>
+		<Bonus effect="1" points="500" payoutName="2'S COMPANY" description="All Ones Turn Into Twos, $500 Bonus" affectedPercent="1" requirement="30"/>
+		<Bonus effect="2" points="1250" payoutName="3'S A CROWD" description="All Ones Turn Into Threes, $1,250 Bonus" affectedPercent="1" requirement="45"/>
+		<Bonus effect="3" points="2500" payoutName="4 ON THE FLOOR" description="All Ones Turn Into Fours, $2,500 Bonus" affectedPercent="1" requirement="60"/>
+		<Bonus effect="4" points="5000" payoutName="5 ALIVE" description="All Ones Turn Into Fives, $5,000 Bonus" affectedPercent="1" requirement="75"/>
+		<Bonus effect="5" points="7500" payoutName="ROUTE 66" description="All Ones Turn Into Sixes, $7,500 Bonus" affectedPercent="1" requirement="90"/>
+		<Bonus effect="9" points="15000" payoutName="QUARTER JACKPOT" description="All Dice Removed, $15,000 Bonus" affectedPercent="1" requirement="105"/>
+		<Bonus effect="9" points="25000" payoutName="HALF JACKPOT" description="All Dice Removed, $25,000 Bonus" affectedPercent="1" requirement="120"/>
+		<Bonus effect="9" points="50000" payoutName="JACKPOT" description="All Dice Removed, $50,000 Bonus" affectedPercent="1" requirement="135"/>
+		<Bonus effect="9" points="75000" payoutName="MEGA JACKPOT" description="All Dice Removed, $75,000 Bonus" affectedPercent="1" requirement="150"/>
+		<Bonus effect="9" points="100000" payoutName="ULTRA JACKPOT" description="All Dice Removed, $100,000 Bonus" affectedPercent="1" requirement="165"/>
+		
+	</BonusesList>
+
+	<Levels>
+		<Level fallSpeed="2" startAcceleration="1" accelerationGrowth="0.5" diceToFinishLevel="50" configurations="0,1,2"/>
+		<Level fallSpeed="2.5" startAcceleration="1" accelerationGrowth="1" diceToFinishLevel="100" configurations="1,2,3"/>
+		<Level fallSpeed="3" startAcceleration="1" accelerationGrowth="0.5" diceToFinishLevel="100" configurations="1,2,3,4"/>
+		<Level fallSpeed="3.5" startAcceleration="1" accelerationGrowth="1" diceToFinishLevel="100" configurations="1,2,3,4,5"/>
+		<Level fallSpeed="4" startAcceleration="1" accelerationGrowth="1.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6"/>
+		<Level fallSpeed="4.5" startAcceleration="1" accelerationGrowth="2" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7"/>
+		<Level fallSpeed="5" startAcceleration="1" accelerationGrowth="2.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8"/>
+		<Level fallSpeed="5.5" startAcceleration="1" accelerationGrowth="3" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9"/>
+		<Level fallSpeed="6" startAcceleration="1" accelerationGrowth="2.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="6.5" startAcceleration="1" accelerationGrowth="3" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="7" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		
+		<Level fallSpeed="8" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="8.5" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="9" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="9.5" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="10" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="10.5" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="11" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="11.5" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="12" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="12.5" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="13" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="13.5" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="14" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="14.5" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="15" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="15.5" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="16" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="16.5" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="17" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="17.5" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="18" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="18.5" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="19" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="19.5" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="20" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>	
+		<Level fallSpeed="20.5" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="21" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="21.5" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="22" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="22.5" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="23" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="23.5" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="24" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="24.5" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="25" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="25.5" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="26" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="26.5" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="27" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="27.5" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="28" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="28.5" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="29" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="29.5" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100" configurations="1,2,3,4,5,6,7,8,9,10"/>
+		<Level fallSpeed="30" startAcceleration="1" accelerationGrowth="3.5" diceToFinishLevel="100000" configurations="1,2,3,4,5,6,7,8,9,10"/>
+	</Levels>
+
+	<_nMaxOverageDice type="Number">48</_nMaxOverageDice>
+	<_nMaxComboChips type="Number">30</_nMaxComboChips>
+	<_nComboChipsBonus type="Number">100000</_nComboChipsBonus>
+
+	<!-- true/false (1/0) if ones dice should disappear as they drop -->
+	<_bDestroyOnesInstantly type="Boolean">0</_bDestroyOnesInstantly>
+
+	<!-- Points -->
+	<_aChipValue type="Array">100,500,1000,5000</_aChipValue>
+	<_aDicePoints type="Array">0,25,50,75,100,125</_aDicePoints>
+
+	<!-- Playfield Dimensions -->
+	<_nColumns type="Number">14</_nColumns>
+	<_nRows type="Number">17</_nRows>
+
+	<_nDiceSize type="Number">33</_nDiceSize>
+
+	<_nTotalDiceTypes type="Number">6</_nTotalDiceTypes>
+
+	<!-- dx/dy for each die is equal to 1 -->
+	<!-- dice rotates around the origin -->
+	<!-- configuration should be input in such a way that the DiceY array is ascending -->
+		
+	<DiceConfiguration>
+		<!-- 0 - Single Die -->
+		<DiceX type="Array">0</DiceX>
+		<DiceY type="Array">0</DiceY>
+	</DiceConfiguration>
+		
+	<DiceConfiguration>
+		<!-- 1 - Two dice in a column -->
+		<DiceX type="Array">0,0</DiceX>
+		<DiceY type="Array">0,1</DiceY>
+	</DiceConfiguration>
+		
+	<DiceConfiguration>
+		<!-- 2 - Three dice in an L shape -->
+		<DiceX type="Array">0.5,-0.5,0.5</DiceX>
+		<DiceY type="Array">-0.5,0.5,0.5</DiceY>
+	</DiceConfiguration>
+				
+	<DiceConfiguration>
+		<!-- 3 - Three dice diagonally -->
+		<DiceX type="Array">1,0,-1</DiceX>
+		<DiceY type="Array">-1,0,1</DiceY>
+	</DiceConfiguration> 
+		
+	<DiceConfiguration>
+		<!-- 4 - Three dice horizontally -->
+		<DiceX type="Array">-1,0,1</DiceX>
+		<DiceY type="Array">0,0,0</DiceY>
+	</DiceConfiguration>	
+
+	<DiceConfiguration>
+		<!-- 5 - Four corners -->
+		<DiceX type="Array">-0.5,0.5,-0.5,0.5</DiceX>
+		<DiceY type="Array">-0.5,-0.5,0.5,0.5</DiceY>
+	</DiceConfiguration>	
+		
+	<DiceConfiguration>
+		<!-- 6 - Cross with a hole in the center - using 4 dice -->
+		<DiceX type="Array">0,-1,1,0</DiceX>
+		<DiceY type="Array">-1,0,0,1</DiceY>
+	</DiceConfiguration>
+		
+	<DiceConfiguration>
+		<!-- 7 - Four corners not touching each other -->
+		<DiceX type="Array">-1,1,-1,1</DiceX>
+		<DiceY type="Array">-1,-1,1,1</DiceY>
+	</DiceConfiguration>	
+		
+	<DiceConfiguration>
+		<!-- 8 - Cross -->
+		<DiceX type="Array">0,-1,0,1,0</DiceX>
+		<DiceY type="Array">-1,0,0,0,1</DiceY>
+	</DiceConfiguration>	
+		
+	<DiceConfiguration>
+		<!-- 9 - L shape - using 5 dice -->
+		<DiceX type="Array">-1,0,1,-1,-1</DiceX>
+		<DiceY type="Array">-1,-1,-1,0,1</DiceY>
+	</DiceConfiguration>
+		
+	<DiceConfiguration>
+		<!-- 10 - X - using 5 dice -->
+		<DiceX type="Array">-1,1,0,-1,1</DiceX>
+		<DiceY type="Array">-1,-1,0,1,1</DiceY>
+	</DiceConfiguration>
+</ignoreMeContainer>
+

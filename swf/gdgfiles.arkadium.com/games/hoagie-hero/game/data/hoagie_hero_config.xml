@@ -1,0 +1,13 @@
+<!--
+This is the new as3 Config file.  It includes required fields.  
+These are loaded as flashvars unless other variables are are already included as flashvars
+-->
+
+<ignoreMeContainer>
+	<_sGameName type="String">hoagie-hero</_sGameName>
+	<StageWidth type="Number">800</StageWidth>
+	<StageHeight type="Number">600</StageHeight>
+	<MochiBotValue>9b547132</MochiBotValue>
+	<!--<encryptedGameEndLoc>30279bfaf4655a08ab4b3be5f325aaaa9953ee89</encryptedGameEndLoc>-->
+    <logConfig>data/logger_config.xml</logConfig>
+</ignoreMeContainer>

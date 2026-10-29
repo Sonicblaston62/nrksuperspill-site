@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sheep_stack>
+	<intro_screen>
+		
+		<intro>
+			<title>Look at me, im intro text!!!!</title>
+			<body>hey look, got me some body</body>
+		</intro>
+		
+		<intructions>
+			<title>How to play</title>
+			<body_1>Complete each level by stacking sheep up to the window</body_1>
+			<body_2>Use the pants to catapult each sheep into the air</body_2>
+			<body_3>Click on the pants and move your mouse to select the angle and power</body_3>
+			<body_4>Release the pants and watch �em stack up to the window</body_4>
+		</intructions>
+		
+		<play_game_button>Play Game!</play_game_button>		
+		
+		<side_bar>
+			<personal_best>Your previous best:</personal_best>			
+			<rank>Your current ranking:</rank>			
+			<todays_high_score>Todays highest score:</todays_high_score>			
+			<overall_high_score>All time highest score</overall_high_score>
+			<your_achievements>Your achievements:</your_achievements>
+			<view_leader_board_button>View Leaderboard</view_leader_board_button>
+		</side_bar>
+	</intro_screen>
+	
+	<hud>
+		<level>LEVEL</level>
+		<score>SCORE</score>
+		<sheep_left>SHEEP USED</sheep_left>
+		<restart_level_tip>Restart Level</restart_level_tip>
+		<select_level_button>Select Level</select_level_button>
+		<keyboard_instructions_title>KEYBOARD CONTROLS</keyboard_instructions_title>
+		
+		<keyboard_instructions>Set angle:LEFT and RIGHT&#xD;Set power: UP and DOWN&#xD;Release: SPACE&#xD;Press 1 and 2 to switch pants</keyboard_instructions>
+	</hud>
+	
+	<level_select>
+		<title>Select a Level</title>
+		<go_back_button>GO BACK</go_back_button>
+	</level_select>
+	
+	<level_start_screen>
+		<title>Get ready to play</title>
+		<body>Get ready to play</body>
+		<start_game_button>START GAME</start_game_button>
+	</level_start_screen>
+	
+	<level_complete_screen>
+		<title>LEVEL COMPLETE!</title>
+		<body1>This round you scored</body1>
+		<body2>and got these achievements</body2>
+		<try_again_button>TRY AGAIN</try_again_button>
+		<next_level_button>NEXT LEVEL</next_level_button>
+		<not_signed_in>to save your scores and win achievements!</not_signed_in>
+	</level_complete_screen>
+	
+	<level_fail_screen>
+		<title>Fail</title>
+		<body1>Ooops you'll need that plank</body1>
+	</level_fail_screen>
+	
+	
+	<hints>
+		<hint1>
+			<title>The pants</title>
+			<body>Pull back the pants to launch the sheep. The more you pull, the further the sheep will fly</body>
+		</hint1>
+		<hint2>
+			<title>The cake</title>
+			<body>Stack the sheep up to get to the window</body>
+		</hint2>
+	</hints>
+	
+</sheep_stack>

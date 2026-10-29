@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BigAndSmallHelperText>
+	<node id="Preloader">
+		<![CDATA[Slik gjør du: Klikk på blomstene mens du venter på å komme inn i huset til Stor og Liten.]]>
+	</node>
+	<node id="FrontOfHouse">
+		<![CDATA[Slik gjør du: Klikk på den store døren for å gå inn i huset som Stor.
+		Klikk på den lille døren for å gå inn som Liten.]]>
+	</node>
+	<node id="LivingRoom">
+		<![CDATA[Slik gjør du: Klikk på Stor hvis du vil spille som Stor.
+		<ul><li>Klikk på Liten hvis du vil spille som Liten.</li>
+		<li>Klikk på pianoet for å spille musikkspillet.</li>
+		<li>Klikk på malingen og papiret for å male med hendene.</li>
+		<li>Se hva mer du kan klikke på i stuen.</li></ul>]]>
+	</node>
+	<node id="LivingRoom.drawingGame">
+		<![CDATA[Slik gjør du: Klikk på papiret for å begynne å male.
+		Klikk på Stor for å male med hånden til Stor.
+		Klikk på Liten for å male med hånden til Liten.
+		Klikk på fargen du vil male med.
+		Klikk på det lille papirikonet for å begynne på nytt.
+		Bruk pilen tilbake for å gå tilbake til stuen.]]>
+	</node>
+	<node id="LivingRoom.bandGame">
+		<![CDATA[Slik gjør du: Klikk på et instrument, og klikk så på den som skal spille på det.
+		Du kan bytte instrumenter når du vil - det er du som styrer bandet!
+		Bruk pilen tilbake for å gå tilbake til stuen.]]>
+	</node>
+	<node id="LivingRoom.video">
+		<![CDATA[Slik gjør du: Klikk på avspillingsknappen for å se et klipp fra serien.
+		Bruk pilen tilbake for å gå tilbake til stuen.]]>
+	</node>
+	<node id="Landing">
+		<![CDATA[Slik gjør du: Klikk på døren for å gå inn på soverommet.
+		Bruk pilen tilbake for å gå tilbake til stuen.]]>
+	</node>
+	<node id="Bedroom">
+		<small><![CDATA[Slik gjør du: Prøv å vekke Stor ved å klikke på ting i rommet som kanskje kan hjelpe, eller klikk på noe for å kaste det på ham, og se om det virker!
+		Bruk pilen tilbake for å gå tilbake til stuen.]]></small>
+		<big><![CDATA[Slik gjør du: Prøv å roe ned Liten ved å klikke på ting i rommet som kanskje kan hjelpe, eller klikk på noe i rommet og så på Liten for å gi det til ham.
+		Bruk pilen tilbake for å gå tilbake til stuen.]]></big>
+	</node>
+	<node id="Bathroom">
+		<![CDATA[Slik gjør du: Klikk på tannbørstene hvis du vil spille tannpussespillet. Se hva mer du kan klikke på på badet. Klikk på døren for å gå inn på soverommet.]]>
+	</node>
+	<node id="Bathroom.toothBrushTackle">
+		<small><![CDATA[Slik gjør du: Plasser ringene over munnen til Stor og klikk for å pusse tennene hans. Fortsett å klikke på munnen til Stor
+		til alle stjernene lyser]]></small>
+		<big><![CDATA[Slik gjør du: Prøv å klikke på munnen til Liten for å pusse tennene hans. Fortsett å klikke på munnen til Liten
+		til alle stjernene lyser]]></big>
+	</node>
+	<node id="Garden.hub">
+		<![CDATA[Hold musen over eller klikk på pilene for å utforske hagen.
+		  Klikk på grønnsakshagen for å spille så-og-dyrke-spillet.
+		  Klikk på epletreet for å spille eplespillet.
+		  Klikk rundt dammen for å finne froskene og fiskene.
+		  Klikk på den mystiske skogen for å se Stor og Liten
+		  danse.]]>
+	</node>
+	<node id="Garden.vegPatch">
+		<![CDATA[Klikk på frøene og plant dem i grønnsakshagen.
+		  Klikk på vannkannen og vann spirene så det vokser
+		  grønnsaker og blomster.
+		  Klikk på spaden for å grave opp plantene.
+		  Klikk på Stor eller Liten for å se ting fra en annen side og
+		  finne andre typer frø.]]>
+	</node>
+	<node id="Garden.appleTree">
+		<![CDATA[Klikk på Stor hvis du vil spille som Stor.
+		  Klikk på Liten hvis du vil spille som Liten.
+		  Klikk på eplene og se hva som skjer!]]>
+	</node>
+	<node id="MysteriousWoods">
+		<![CDATA[Finn Stor eller Liten i den mystiske skogen.
+		  Klikk på pilene for å gå gjennom den mystiske skogen.
+		  Når stien deler seg, velger du vei ved å klikke på pilen til venstre
+		  eller høyre.
+		  Bruk menyknappen for å gå tilbake til hagen eller huset.]]>
+	</node>
+</BigAndSmallHelperText>

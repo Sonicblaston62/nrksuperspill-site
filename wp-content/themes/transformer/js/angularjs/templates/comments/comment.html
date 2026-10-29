@@ -1,0 +1,56 @@
+<div class="grid18">
+    <div class="m-grid18">
+        <div class="grid2of3 h5 author" ng-cloak>
+            {{comment.name}}
+        </div>
+        <div class="grid1of3 text-right date x-small">
+			<i class="icon icon-clock"></i>
+			<small>
+				{{comment.date | relativeTime}}
+            </small>
+        </div>
+        <p class="grid18 text" ng-cloak>
+            {{comment.content}}
+        </p>
+        <div class="grid18 action text-right">
+            <span
+                class="reply bg-season{{data.season.id}} circle right"
+                ng-click="toggleCommentForm()">
+                <a title="Svar på kommentaren" class="comment-reply-link">
+                        <i class="icon icon-reply white"></i>
+                </a>
+            </span>
+        </div>
+    </div>
+</div>
+<super-comment-form
+		class="m-grid18"
+    data-post-id="{{data.id}}"
+    data-season-id="{{data.season.id}}"
+    data-parent-id="{{comment.id}}"
+    data-parent-name="{{comment.name}}"
+    ng-show="showCommentForm"
+    data-new-comment="asyncAddNewComment(newComment)"></super-comment-form>
+<ul class="grid18 children depth-0 unstyled">
+    <li
+        ng-repeat="child in comment.children"
+        data-comment-id="{{child.id}}"
+        data-comment-parent="{{comment.id}}"
+        class="grid18 comment">
+            <div class="grid18">
+                <div class="m-grid18">
+                    <div class="grid2of3 h5 author" ng-cloak>
+                        {{child.name}}
+                    </div>
+                    <div class="grid1of3 text-right date x-small">
+						<i class="icon icon-clock"></i>
+                        <small>{{child.date | relativeTime}}</small>
+                    </div>
+                    <p class="grid18 text" ng-cloak>
+                        {{child.content}}
+                    </p>
+                </div>
+            </div>
+    </li>
+</ul>
+<div class="clearfix" />

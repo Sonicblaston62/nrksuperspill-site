@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<baahmy_golf>
+    <intro_screen>
+        
+        <intro>
+            <title>Baahmy Golf</title>
+            <body></body>
+        </intro>
+        
+        <intructions>
+		<title>How to play</title>
+			<body_1>Help Shaun score by smashing up as much as possible in 5 shots</body_1>
+			<body_2>Set your ball's angle and power by clicking the buttons or use your spacebar</body_2>
+			<body_3>Use your mouse or spacebar to control the flippers while the ball�s in play</body_3>
+			<body_4>Try to get a mole-in-one!</body_4>
+		</intructions>
+        
+        <play_game_button>Play Game!</play_game_button>     
+        
+        <side_bar>
+            <personal_best>Your previous best:</personal_best>          
+            <rank>Your current ranking:</rank>          
+            <todays_high_score>Todays highest score:</todays_high_score>            
+            <overall_high_score>All time highest score</overall_high_score>
+            <your_achievements>Your achievements:</your_achievements>
+            <view_leader_board_button>View Leaderboard</view_leader_board_button>
+        </side_bar>
+    </intro_screen>
+    
+    <game_screen>
+        <smashed>SMASHED</smashed>
+        <your_score>YOUR SCORE</your_score>
+        <shots>SHOTS</shots>
+        
+        <set_angle>Set angle</set_angle>
+        <set_power>Set power</set_power>
+        <flippers>Flippers</flippers>
+        
+        <instruction_panel>
+            <title>GET READY TO PLAY</title>
+            <description>Get points by smashing things!
+Use keyboard or mouse.</description>
+            <btn_play>PLAY GAME!</btn_play>
+            <space>SPACE</space>
+        </instruction_panel>
+        
+        <preview_panel>
+            <title>COURSE PREVIEW</title>
+            <btn_pause>PAUSE</btn_pause>
+            <btn_resume>RESUME</btn_resume>
+            <btn_skip>SKIP</btn_skip>
+        </preview_panel>
+        
+        <shot_panel>
+            <title>SHOT SCORES</title>
+            <score>SCORE</score>
+            <ball>BALL</ball>
+			<get_ready>Get ready</get_ready>
+        </shot_panel>
+        
+        <tips>
+            <recycle>
+                <title>RECYCLE BOX</title>
+                <desc>Use the recycle box lid as a flipper to punt the ball.</desc>
+            </recycle>
+
+            <moped>
+                <title>MOPED TOP BOX</title>
+                <desc>Click the mouse to flip the lid. If you catch the ball just right, it'll go flying!</desc>
+            </moped>
+
+            <duck>
+                <title>DUCK</title>
+                <desc>Click the mouse to make the duck bob and dive. If the ball is nearby, he'll flick it away fast.</desc>
+            </duck>
+
+            <toilet>
+                <title>TOILET SEAT</title>
+                <desc>Click the mouse to make the toilet seat flip up. Use it to flip the ball around.</desc>
+            </toilet>
+
+            <molehill>
+                <title>MOLE HILL</title>
+                <desc>Click the mouse to make a mole pop up. He can bash the ball about too.</desc>
+            </molehill>
+
+            <pigsty>
+                <title>PIG STY</title>
+                <desc>Bash this metal tunnel to rudely awaken the pig sleeping inside!</desc>
+            </pigsty>
+
+            <moleinone>
+                <title>MOLE HILL</title>
+                <desc>Earn the 'mole in one' achievement by dropping the ball into this mole hill.</desc>
+            </moleinone>
+
+            <record>
+                <title>RECORD PLAYER</title>
+                <desc>If the ball hits the record, it'll be flung off at high speed.</desc>
+            </record>
+
+            <slide>
+                <title>RICKETY SLIDE</title>
+                <desc>Drop the ball onto the top of this and it'll gather points all the way down.</desc>
+            </slide>
+
+            <balloons>
+                <title>BALLOONS</title>
+                <desc>Strike the balloons three times to release them all and earn an achievement.</desc>
+            </balloons>
+
+            <drainpipe>
+                <title>DRAINPIPE</title>
+                <desc>Drop into the drainpipe and the ball will land at Shaun's feet. Quick, take a sneaky second shot!</desc>
+            </drainpipe>
+
+            <mopedachievement>
+                <title>MOPED TOP BOX</title>
+                <desc>Can you trap the ball inside the box three times? It'll earn you an achievement.</desc>
+            </mopedachievement>
+
+            <tyre>
+                <title>TRACTOR TYRE</title>
+                <desc>If the ball hits this tyre, it'll get a powerful speed boost.</desc>
+            </tyre>
+
+            <shaun>
+                <title>SNEAKY SECOND SHOT</title>
+                <desc>If the ball is by Shaun's feet, click the mouse to take another swipe at it. Go on, nobody's looking.</desc>
+            </shaun>
+
+            <bucket>
+                <title>SHOWER BUCKET</title>
+                <desc>Hit the bucket three times to open the shed door and see what's going on inside.</desc>
+            </bucket>
+
+            <vegbox>
+                <title>VEG-BOX</title>
+                <desc>Click the mouse to make the veg-box doors fly open. They'll bat the ball around and give it an extra boost.</desc>
+            </vegbox>
+
+            <flagpole>
+                <title>FLAG POLE</title>
+                <desc>You get lots of points for plonking the ball in the hole under the flag.</desc>
+            </flagpole>
+
+            <deckchair>
+                <title>DECKCHAIR</title>
+                <desc>The deckchair flings the ball away. Good for smashing lots of the nearby glass.</desc>
+            </deckchair>
+
+            <flush>
+                <title>TOILET</title>
+                <desc>Drop the ball into the toilet and it'll come flying out of the U-bend.</desc>
+            </flush>
+
+            <molejump>
+                <title>MOLE HILL</title>
+                <desc>Click the mouse and a mole will leap out of this mound. He can knock the ball to the sides.</desc>
+            </molejump>
+
+            <greenhouse>
+                <title>GREENHOUSE</title>
+                <desc>Smash the glass for an easy score multiplier.</desc>
+            </greenhouse>
+
+            <gnomes>
+                <title>GARDEN GNOMES</title>
+                <desc>Earn an achievement by knocking over or smashing all three gnomes in one game.</desc>
+            </gnomes>
+
+            <tractor>
+                <title>TRACTOR FUNNEL</title>
+                <desc>Drop the ball in here and it'll come shooting out of another part of the tractor.</desc>
+            </tractor>
+
+            <bath>
+                <title>BATHTUB</title>
+                <desc>Mysterious forces inside the bath fling the ball out at high speed.</desc>
+            </bath>
+
+            <scoop>
+                <title>TRACTOR BUCKET</title>
+                <desc>Drop the ball into the bucket and it'll be shot back out at high speed.</desc>
+            </scoop>
+        </tips>
+        
+    </game_screen>
+    
+</baahmy_golf>

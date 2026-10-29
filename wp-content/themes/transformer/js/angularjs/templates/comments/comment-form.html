@@ -1,0 +1,44 @@
+<form name="commentForm" novalidate class="padding comment-form" ng-submit="postComment(userComment)">
+    <fieldset ng-disabled="isSending">
+        <div id="comment-rules-toggle-block" class="line small">
+            <div class="grid18 text-right toggle-block">
+                <a ng-click="toggleCommentRules()">
+                    Regler for kommentering<span class="icon-arrow-down toggle"></span>
+                </a>
+            </div>
+            <div class="line content_box" ng-show="showCommentRules" ng-cloak>
+                <div class="m-grid18">
+                    <div data-super-wpurls-id="comments.rules">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid18">
+            <label class="req" for="name">Fornavn</label>
+            <input class="grid6" maxlength="10" type="text" value="" size="30" aria-required="true" ng-model="userComment.author" name="author" required>
+            <div ng-show="commentForm.$submitted || commentForm.author.$touched" class="grid3 padding">
+                <div ng-show="commentForm.author.$error.required">Du må skrive inn navnet ditt</div>
+            </div>
+        </div>
+        <div class="grid18">
+            <label class="req" for="email">E-post</label>
+            <input class="grid6" type="email" value="" size="30" aria-required="true" ng-model="userComment.email" name="email" required>
+            <div ng-show="commentForm.$submitted || commentForm.email.$touched" class="grid3 padding">
+                <div ng-show="commentForm.email.$error.required">Du må skrive inn eposten din</div>
+            </div>
+        </div>
+        <div class="grid18">
+            <label class="req" for="comment">Kommentar</label>
+            <textarea cols="45" rows="4" aria-required="true" type="text" ng-model="userComment.comment" name="comment" required></textarea>
+            <div ng-show="commentForm.$submitted || commentForm.comment.$touched">
+                <div ng-show="commentForm.comment.$error.required" class="grid3 padding">Du må skrive inn en kommentar</div>
+            </div>
+        </div>
+        <div class="form-submit">
+            <input class="bg-season{{seasonId}}" type="submit" ng-disabled="commentForm.$invalid || !commentForm.$dirty" value="Send" data-super-comment-loading>
+        </div>
+    </fieldset>
+</form>
+<div class="grid18 form-notes">
+	<span class="req">Din e-postadresse vil ikke vises. Obligatoriske felt er merket med</span>
+</div>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<chicken_n_spoon>
+	<intro_screen>
+		
+		<intro>
+			<title>Chick and Spoon Race</title>
+			<body></body>
+		</intro>
+		
+		<intructions>
+			<title>How to play</title>
+			<body_1>Help Shaun win by collecting as many stars as possible</body_1>
+			<body_2>Use your bouncing baby chick to help you and try to avoid the mud puddles</body_2>
+			<body_3>Your chick can hit the ground 3 times, but no more or it's game over</body_3>
+			<body_4>Use your arrow keys to catch up with your chick</body_4>
+		</intructions>
+		
+		<play_game_button>START GAME</play_game_button>		
+		
+		<side_bar>
+			<personal_best>Your previous best:</personal_best>			
+			<rank>Your current ranking:</rank>			
+			<todays_high_score>Todays highest score:</todays_high_score>			
+			<overall_high_score>All time highest score</overall_high_score>
+			<your_achievements>Your achievements:</your_achievements>
+			<view_leader_board_button>View Leaderboard</view_leader_board_button>
+		</side_bar>
+		
+	</intro_screen>
+	
+	<instruction_panel>
+		<title>GET READY TO PLAY</title>
+		<description>Use arrow keys to control Shaun, Space to jump and throw</description>
+		<btn_play>START GAME</btn_play>
+		<space>SPACE</space>
+	</instruction_panel>
+	
+	<lifelost_panel>
+		<title>OOPS!</title>
+		<copy1>Oh no! Only 2 chicks left</copy1>
+		<copy2>Oh no! Only 2 eggs left</copy2>
+		
+		<copy3>Careful, only 1 chick left</copy3>
+		<copy4>Careful, only 1 egg left</copy4>
+		
+		<copy5>Oh no! Your chick has flown away</copy5>
+		<copy6>Oh no! Your egg has rolled away</copy6>
+	</lifelost_panel>
+	
+	<tooltip>
+		<egg>Be careful not to drop your egg too many times!</egg>
+		<chick>Be careful not to drop your chick too many times!</chick>
+	</tooltip>
+	
+	<game_screen>
+		<eggs>EGGS LEFT</eggs>
+		<score>YOUR SCORE</score>		
+		<distance>DISTANCE</distance>
+	</game_screen>
+	
+</chicken_n_spoon>

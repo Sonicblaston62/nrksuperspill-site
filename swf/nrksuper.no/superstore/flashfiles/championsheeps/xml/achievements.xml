@@ -1,0 +1,55 @@
+<achievements>
+	<!-- ALIEN ATHLETICS -->
+    <achievement mochiID = "8866ce8609554fe0" achievementID = "ALIEN_02" name = "Game Played!" description = "Play Alien Athletics at least once" game = "ALIEN" progressive = "false"/>
+    <achievement mochiID = "142db756990ccdcd" achievementID = "ALIEN_01" name = "Bleat That!" description = "Evade the alien for 100 metres without losing a single sheep" game = "ALIEN" progressive = "false"/>
+    <achievement mochiID = "b6ca98ebf80e9bf2" achievementID = "ALIEN_05" name = "Half Marathon" description = "Accumulate 21,097 metres whilst playing Alien Athletics" game = "ALIEN" progressive = "true"/>
+    <achievement mochiID = "253e506e94b4d5c0" achievementID = "ALIEN_06" name = "Marathon" description = "Accumulate 42,194 metres whilst playing Alien Athletics" game = "ALIEN" progressive = "true"/>
+    <achievement mochiID = "7e94985678c0f492" achievementID = "ALIEN_07" name = "London to Paris" description = "Accumulate 342,790 metres (London to Paris!) whilst playing Alien Athletics" game = "ALIEN" progressive = "true"/>
+    <achievement mochiID = "0e43d8572343f607" achievementID = "ALIEN_08" name = "Woolly Jumper" description = "Successfully jump 100 obstacles" game = "ALIEN" progressive = "true"/>
+    <achievement mochiID = "2bdc25c92f042b7a" achievementID = "ALIEN_09" name = "High Jumper" description = "Successfully jump 500 obstacles" game = "ALIEN" progressive = "true"/>
+    <achievement mochiID = "7a5e1023f5c96d09" achievementID = "ALIEN_10" name = "Star Herdler" description = "Successfully jump 1000 obstacles" game = "ALIEN" progressive = "true"/>
+    <achievement mochiID = "d23c80a237bfa6f7" achievementID = "ALIEN_11" name = "Cosmic Skills" description = "Perform a triple jump in quick succession" game = "ALIEN" progressive = "true"/>
+
+	<!-- BAAHMY GOLF -->
+    <achievement mochiID = "3dd61af3b97ec593" achievementID = "GOLF_01" name = "Game Played!" description = "Play Baahmy Golf at least once" game = "GOLF" progressive = "false"/>
+    <achievement mochiID = "2983e836d13c72ea" achievementID = "GOLF_04" name = "Free Range" description = "Keep the ball bouncing around the course for at least 30 seconds" game = "GOLF" progressive = "false"/>
+    <achievement mochiID = "cd21aeee4b696801" achievementID = "GOLF_05" name = "Smash Hits" description = "Smash 10 objects with one ball" game = "GOLF" progressive = "false"/>
+    <achievement mochiID = "db01cd05dcfb2280" achievementID = "GOLF_08" name = "Glass Act " description = "Smash all glass in the greenhouse in one round of golf" game = "GOLF" progressive = "false"/>
+    <achievement mochiID = "9ea8b98da0025de4" achievementID = "GOLF_09" name = "Gnome Basher" description = "Knock down all 3 gnomes in one round of golf" game = "GOLF" progressive = "false"/>
+    <achievement mochiID = "6b54542d081f657f" achievementID = "GOLF_10" name = "Flippin’ Great" description = "Use all the flippers at least once in one round of golf" game = "GOLF" progressive = "false"/>
+    <achievement mochiID = "79200cb9eb8b8df9" achievementID = "GOLF_11" name = "Mole-in-One" description = "Hit the ball into the molehill" game = "GOLF" progressive = "false"/>
+    <achievement mochiID = "cf6214a55726ec65" achievementID = "GOLF_13" name = "Recycling Rewards" description = "Trap the ball into the recycling bin" game = "GOLF" progressive = "false"/>
+    <achievement mochiID = "2be200e959a58671" achievementID = "GOLF_15" name = "Flush It Out" description = "Flush the ball down the toilet 3 times in one round of golf" game = "GOLF" progressive = "false"/>
+    
+	<!-- CHICK N SPOON -->
+    <achievement mochiID = "749c675a2b53799d" achievementID = "CHICKNS_01" name = "Eggxtra Mile" description = "Run for 60 seconds without dropping the egg/chick" game = "CHICKNS" progressive = "false"/>
+    <achievement mochiID = "06f17eab7e5d658d" achievementID = "CHICKNS_02" name = "Eggcellent Jumper" description = "Jump over 20 mud puddles without dropping the egg/chick" game = "CHICKNS" progressive = "false"/>
+	<achievement mochiID = "66c33e7aa076bb2f" achievementID = "CHICKNS_03" name = "Game Played!" description = "Play Chick 'N' Spoon at least once" game = "CHICKNS" progressive = "false"/>
+    <achievement mochiID = "d121434fabfe698e" achievementID = "CHICKNS_05" name = "Half Marathon" description = "Accumulate 21,097 metres (a half marathon!) whilst playing Chick 'N' Spoon" game = "CHICKNS" progressive = "true"/>
+    <achievement mochiID = "a149d3554c86995b" achievementID = "CHICKNS_06" name = "Marathon" description = "Accumulate 42,194 metres (a full marathon) whilst playing Chick 'N' Spoon" game = "CHICKNS" progressive = "true"/>
+    <achievement mochiID = "6e7fcfb23a656c30" achievementID = "CHICKNS_07" name = "London to Paris" description = "Accumulate 342,790 metres (London to Paris!) whilst playing Chick 'N' Spoon" game = "CHICKNS" progressive = "true"/>
+    <achievement mochiID = "8c28ee614c22f445" achievementID = "CHICKNS_08" name = "Egg Timer" description = "Keep the chick in the air for two minutes during a single game" game = "CHICKNS" progressive = "false"/>
+    <achievement mochiID = "06d507a1a15f663d" achievementID = "CHICKNS_09" name = "Egg Head" description = "Bounce the egg/chick on Shaun's head 30 times in a single game" game = "CHICKNS" progressive = "false"/>
+    <achievement mochiID = "377fb6199ef95bc5" achievementID = "CHICKNS_10" name = "Star Hatcher" description = "Collect at least 100 stars in a single game" game = "CHICKNS" progressive = "false"/>
+    
+	<!-- FLOCK TOGETHER -->
+	<achievement mochiID = "d121434fabfe698e" achievementID = "FLOCK_02" name = "Game Played!" description = "Play Flock Together at least once" game = "FLOCK" progressive = "false"/>
+    <achievement mochiID = "6620a42cbb86a407" achievementID = "FLOCK_01" name = "Sheepy Uppy" description = "Bounce a single sheep off the tyres seven times or more on Level 8" game = "FLOCK" progressive = "false"/>
+    <achievement mochiID = "09f30dd201c48f29" achievementID = "FLOCK_05" name = "Clean Sheep " description = "Clear all your sheep in one level" game = "FLOCK" progressive = "false"/>
+    <achievement mochiID = "51f60089c4289131" achievementID = "FLOCK_07" name = "Counting Sheep" description = "Clear six or more sheep with one throw" game = "FLOCK" progressive = "false"/>
+    <achievement mochiID = "09f30dd201c48f29" achievementID = "FLOCK_08" name = "Shear Genius" description = "Complete a level without touching the sides" game = "FLOCK" progressive = "false"/>
+    <achievement mochiID = "01054d5433785144" achievementID = "FLOCK_11" name = "Sheep-a-Float" description = "Keep a sheep off the ground for 10 seconds or more" game = "FLOCK" progressive = "false"/>
+	<achievement mochiID = "00fdcd8efc7cbbf5" achievementID = "FLOCK_12" name = "Wild Thing!" description = "Use the wildcard sheep 20 times whilst playing Flock Together" game = "FLOCK" progressive = "true"/>
+	<achievement mochiID = "c3ece12ec4667ede" achievementID = "FLOCK_13" name = "Baa Baa Black Sheep" description = "Use the black sheep 20 times whilst playing Flock Together" game = "FLOCK" progressive = "true"/>
+    
+	<!-- SHEEP STACK -->
+    <achievement mochiID = "b8b5b0399b6157cc" achievementID = "STACK_01" name = "Game Played!" description = "Play Sheep Stack at least once" game = "STACK" progressive = "false"/>
+    <achievement mochiID = "dde9eb7ce17bfce3" achievementID = "STACK_04" name = "Below Par" description = "Complete the whole game with less than 65 sheep" game = "STACK" progressive = "false"/>
+    <achievement mochiID = "7646cdd5f3b1d77e" achievementID = "STACK_05" name = "Clever Ewe" description = "Complete a level without dropping a single sheep" game = "STACK" progressive = "false"/>
+    <achievement mochiID = "1ad53211d0131f34" achievementID = "STACK_06" name = "Sheep Trick" description = "Use a mid-air sheep collision to land a sheep on the stack" game = "STACK" progressive = "false"/>
+    <achievement mochiID = "f3b41c72c37fb4ab" achievementID = "STACK_07" name = "Shear Skill" description = "Create a stack of 12 sheep or more" game = "STACK" progressive = "false"/>
+    <achievement mochiID = "6f0b3f2064b07cfc" achievementID = "STACK_08" name = "Tri Hard " description = "Create an upside down triangle of sheep in Level 3" game = "STACK" progressive = "false"/>
+    <achievement mochiID = "07f9c192e5330d7e" achievementID = "STACK_09" name = "Sheep Collider" description = "Collide two sheep in mid-air" game = "STACK" progressive = "false"/>
+    <achievement mochiID = "a7fd612eee0ce959" achievementID = "STACK_10" name = "One Sheep Wonder" description = "Complete a level with just one sheep" game = "STACK" progressive = "false"/>
+    <achievement mochiID = "da77c5942352697a" achievementID = "STACK_11" name = "Speed Stacker" description = "Complete all 12 levels in under 10 minutes" game = "STACK" progressive = "false"/>
+</achievements>

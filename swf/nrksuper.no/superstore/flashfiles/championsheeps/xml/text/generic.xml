@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<generic>
+	
+	
+	<game_names>
+		<alien_athletics>Alien Athletics</alien_athletics>
+		<baahmy_golf>Baahmy Golf</baahmy_golf>
+		<chicken_n_spoon>Chick N Spoon</chicken_n_spoon>
+		<flock_together>Flock Together</flock_together>
+		<sheep_stack>Sheep Stack</sheep_stack>
+	</game_names>
+	
+	
+	
+	
+	
+	<farm_yard>
+		
+		<name>Farm Yard</name>
+		
+		<movement_button>
+			<main_text>Movement:</main_text>
+			<on_text>ON</on_text>
+			<off_text>OFF</off_text>
+		</movement_button>
+		
+		<drop_down_panel>
+			<play_now_button>PLAY NOW!</play_now_button>
+			<personal_best>Personal Best:</personal_best>
+			<achievements>Achievements:</achievements>
+		</drop_down_panel>
+		
+		<bottom_boards>
+			<signed_in_board>
+				<title_left>TOP PLAYERS</title_left>
+				<title_right>LATEST ACHIEVEMENTS</title_right>
+				<button_left>View All</button_left>
+				<button_right>View All</button_right>
+			</signed_in_board>
+			
+			<sign_in_board>
+				<title>SIGN IN WITH YOUR CBBC ID</title>
+			</sign_in_board>
+		</bottom_boards>
+
+		<intructions>
+			<title>How to play</title>
+			<body_1>Click here to stop movement around the farmyard</body_1>
+			<body_2>Click here to see the instructions</body_2>
+			<body_3>Click here to turn sound off/on</body_3>
+			<body_4>Click any one of these logos to play each game</body_4>
+		</intructions>
+
+		
+	</farm_yard>
+	
+	
+	
+	
+	<top_level_ui>
+		<return_to_farmyard_button>Return to Farmyard</return_to_farmyard_button>
+		<tool_tip_turn_sound_on>Turn Sound ON</tool_tip_turn_sound_on>
+		<tool_tip_turn_sound_off>Turn Sound OFF</tool_tip_turn_sound_off>
+		<tool_tip_show_help>Show Help</tool_tip_show_help>
+		<tool_tip_hide_panel>Hide this panel</tool_tip_hide_panel>
+		<tool_tip_show_panel>Show this panel</tool_tip_show_panel>
+	</top_level_ui>
+	
+	
+	
+	
+	<achievements_leaderboard>
+		<title>
+			<leader_board>LEADERBOARD</leader_board>
+			<achievements>ACHIEVEMENTS</achievements>			
+		</title>
+		
+		<overall>Overall</overall>
+		
+		<leaderboard>
+			<personal_best>Personal Best</personal_best>
+			<rank>Rank</rank>
+			<username>Screen Name</username>
+			<score>Score</score>
+		</leaderboard>
+		
+		<achievements>
+			<overview>Overview</overview>
+		</achievements>
+	</achievements_leaderboard>
+	
+	
+	
+	
+	<popups>
+		<invalid_bbc_account>
+			<message>Oops! We've noticed you're signed in with a 16+ account, so you will not be able to save your score or win any achievements.</message>
+			<button>CONTINUE</button>
+		</invalid_bbc_account>
+		
+		<not_logged_in>
+			<message>Please sign in to save your scores and achievements!</message>
+		</not_logged_in>
+		
+		<no_screen_name>
+			<message><![CDATA[Oops!
+You need a CBBC Screen Name to play these games.]]></message>
+			<button>GET SCREEN NAME</button>
+		</no_screen_name>
+		
+	</popups>
+	
+	
+	
+	
+	<game_play>
+		
+		<preloader>
+			<loading_bar_text>LOADING!</loading_bar_text>
+		</preloader>
+		
+		<intro_screen>
+			<how_to_play_button>HOW TO PLAY</how_to_play_button>
+			<play_game>PLAY GAME!</play_game>
+			<go_back_button>GO BACK</go_back_button>
+		</intro_screen>
+		
+		<results_screen>
+			
+			<left>
+				<congratulations>Congratulations</congratulations>
+				<this_round_you_scored>This game you scored:</this_round_you_scored>
+				<your_previous_best>Your previous best:</your_previous_best>
+				<your_current_ranking>Your current ranking:</your_current_ranking>
+				<achievements_awarded_this_round>Achievements awarded this game</achievements_awarded_this_round>
+				<play_again_button>PLAY AGAIN!</play_again_button>
+			</left>
+			
+			<right>
+				<todays_highest_score>Todays highest score:</todays_highest_score>
+				<all_time_highest_score>previous best score:</all_time_highest_score>
+				<view_leaderboard_button>VIEW LEADERBOARD</view_leaderboard_button>
+			</right>
+			
+			<right_not_signed_in>to save your scores and win achievements!</right_not_signed_in>
+			
+		</results_screen>
+		
+	</game_play>
+	
+	
+	
+	
+	
+</generic>

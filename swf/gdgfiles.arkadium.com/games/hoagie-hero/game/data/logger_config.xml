@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<logConfig>
+	<messageTypes>
+		<messageType name="SCORELOG">
+			<param name="note" type="String"/>
+			<param name="score" type="int"/>
+            <param name="addedValue" type="int"/>
+		</messageType>
+		<messageType name="GAMELOADED">
+			<param name="loadTime" type="int"/>
+		</messageType>
+		<messageType name="STARTGAME">
+			<param name="loadTime" type="int"/>
+		</messageType>
+		<messageType name="ENDGAME">
+			<param name="score" type="int"/>
+		</messageType>
+		<messageType name="FRAMERATE">
+			<param name="fps" type="int"/>
+		</messageType>
+		<messageType name="ERROR">
+			<param name="errorName" type="String"/>
+			<param name="errorNote" type="String"/>
+			<param name="errorNumber" type="String"/>
+		</messageType>
+		<messageType name="GOOGLECUSTOMEVENT">
+			<param name="eventName" type="String"/>
+			<param name="eventNote" type="String"/>
+			<param name="eventNumber" type="String"/>
+		</messageType>
+	</messageTypes>
+	<loggers>
+		<logger id="test" url="data/external_loggers/google-analytics-logger.swf">
+			<subscribe messageType="SCORELOG"/>
+			<subscribe messageType="GAMELOADED"/>
+			<subscribe messageType="STARTGAME"/>
+			<subscribe messageType="ENDGAME"/>
+			<subscribe messageType="FRAMERATE"/>
+			<subscribe messageType="ERROR"/>
+			<subscribe messageType="GOOGLECUSTOMEVENT"/>
+		</logger>
+		<logger id="test" url="data/external_loggers/gameplay-logger.swf">
+			<subscribe messageType="SCORELOG"/>
+			<subscribe messageType="STARTGAME"/>
+			<subscribe messageType="ENDGAME"/>
+		</logger>
+	</loggers>
+</logConfig>
+
+<!-- 
+public static const GAME_START:MessageType = new MessageType("GAME_START");
+		public static const GAME_SCORE:MessageType = new MessageType("GAME_SCORE_CHANGE", {score:int});
+		public static const GAME_WIN:MessageType = new MessageType("GAME_WIN", {score:int});
+		public static const GAME_END:MessageType = new MessageType("GAME_END", {score:int});
+		public static const GAME_LOSE:MessageType = new MessageType("GAME_LOSE", {score:int});
+		public static const GAME_QUIT:MessageType = new MessageType("GAME_QUIT");
+		public static const GAME_STAGE_START:MessageType = new MessageType("GAME_STAGE_START", {stageID:String});
+		public static const GAME_STAGE_COMPLETE:MessageType = new MessageType("GAME_STAGE_COMPLETE", {score:int});
+		public static const GAME_LEVEL_START:MessageType = new MessageType("GAME_LEVEL_START", {levelID:String});
+		public static const GAME_LEVEL_COMPLETE:MessageType = new MessageType("GAME_LEVEL_COMPLETE", {score:int});
+		
+		public static const PLAYLOG_MSG:MessageType = new MessageType("PLAYLOG_MSG", {gameName:string; note:String, score:int, addedValue:int});
+		public static const CUSTOM_MESSAGE:MessageType = new MessageType("CUSTOM", {data:Object});
+		 -->
